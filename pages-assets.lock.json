@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "tag": "demo-v0.1.0",
+  "url": "https://github.com/benjamin-small/llm-in-browser/releases/download/demo-v0.1.0/aster-demo-v0.1.0.zip",
+  "bytes": 217569159,
+  "sha256": "45acc47da78d803788553205901d458a751894b88373b29ec726bd4272813d68",
+  "files": {
+    "licenses/Flare-MIT.txt": {
+      "bytes": 1069,
+      "sha256": "45da353da0be53cd444c3a96ff3cb72f28c35f0843442700a0198de62666a6ab"
+    },
+    "licenses/SmolLM2-Apache-2.0.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "licenses/SmolLM2-model-card.md": {
+      "bytes": 7304,
+      "sha256": "6b88794416ac9da8f254ebb0bec228967a2bdd0badf9a2853863928b25facd95"
+    },
+    "models/tuned-q4/aster-tuned-q4_0.gguf": {
+      "bytes": 229118528,
+      "sha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff"
+    },
+    "models/tuned-q4/config.json": {
+      "bytes": 846,
+      "sha256": "224f72354f10d617a359cc82ad15a3c96e866b9b2ffadb81997eeea9e88e22ee"
+    },
+    "models/tuned-q4/generation_config.json": {
+      "bytes": 132,
+      "sha256": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013"
+    },
+    "models/tuned-q4/manifest.json": {
+      "bytes": 10445,
+      "sha256": "4bb09c43f3e1ed3256ddf5f4a6dd5bdda6eb3def399e884d0cb118d5e138ff92"
+    },
+    "models/tuned-q4/tokenizer.json": {
+      "bytes": 2104556,
+      "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c"
+    },
+    "models/tuned-q4/tokenizer_config.json": {
+      "bytes": 3764,
+      "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df"
+    },
+    "runtime/flare/flare_web.js": {
+      "bytes": 125369,
+      "sha256": "e242e56eb5b2a5efefe25e5c5f1afa45775a47f575435f5713f0d21083174dc8"
+    },
+    "runtime/flare/flare_web_bg.wasm": {
+      "bytes": 1923307,
+      "sha256": "7b4f95c89a7d25af0372d0d9cc80c61ea92c78ea7876ffeb0875adfc78275be1"
+    },
+    "runtime/station/station_core.js": {
+      "bytes": 9401,
+      "sha256": "46c7bda478b685afa63ca7fe351509c0bb8448bfb0ca0e0f3bae29367e87de81"
+    },
+    "runtime/station/station_core_bg.wasm": {
+      "bytes": 225120,
+      "sha256": "e899215ee1c68135db15b6fad2c5d9f9e50bc3eee5c4d1c2d9d9ce2f29826136"
+    }
+  },
+  "sourceHashes": {
+    "patches/flare-smollm2.patch": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "crates/station-core/src/lib.rs": "1a3c51cca840157f7e8a583b86d6edd854f0ded0e2fad9f87785070881f03eb5",
+    "public/data/station.json": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f",
+    "public/data/prompt.json": "e23aeb32816126be6cc5ee2f22c054f3572539eb066ccf36962e5f21ac6a5575"
+  }
+}

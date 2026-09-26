@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 1,
+  "id": "tuned-q8",
+  "name": "Tuned SmolLM2 \u00b7 Q8_0",
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "quantization": "Q8_0",
+  "datasetVersion": "aster-1.2.0",
+  "training": {
+    "settings": {
+      "model": ".cache/hf-base",
+      "data": "data",
+      "train": true,
+      "seed": 730,
+      "num_layers": 16,
+      "batch_size": 4,
+      "iters": 600,
+      "learning_rate": 0.0001,
+      "max_seq_length": 1024,
+      "mask_prompt": true,
+      "fine_tune_type": "lora",
+      "lora_parameters": {
+        "rank": 16,
+        "scale": 20.0,
+        "dropout": 0.0
+      },
+      "steps_per_report": 20,
+      "steps_per_eval": 100,
+      "val_batches": -1,
+      "save_every": 100,
+      "adapter_path": "artifacts/training/checkpoints",
+      "report_to": null
+    },
+    "stepsCompleted": 600,
+    "bestStep": 499,
+    "bestValidationLoss": 0.0031355612445622683,
+    "elapsedSeconds": 118.65883574995678,
+    "peakMemoryGB": 3.405529806,
+    "dataset": {
+      "version": "aster-1.2.0",
+      "seed": 730,
+      "entities": 100,
+      "facts": 500,
+      "examples": {
+        "train": 13641,
+        "valid": 950,
+        "test": 165
+      },
+      "heldOutTestEntities": [
+        "device-10",
+        "device-20",
+        "device-30",
+        "person-10",
+        "person-20",
+        "room-10",
+        "supply-10",
+        "supply-20"
+      ],
+      "heldOutValidationEntities": [
+        "device-09",
+        "device-19",
+        "device-29",
+        "person-09",
+        "person-19",
+        "room-09",
+        "supply-09",
+        "supply-19"
+      ],
+      "trainTemplates": [
+        "What is {s}\u2019s {p}?",
+        "Tell me the {p} for {s}.",
+        "For {s}, what is the {p}?",
+        "Give the {p} of {s}.",
+        "I need {s}\u2019s {p}.",
+        "Can you tell me {s}\u2019s {p}?",
+        "Look up the {p} for {s}.",
+        "Please state {s}\u2019s {p}."
+      ],
+      "validationTemplates": [
+        "What does the record say about {s}\u2019s {p}?"
+      ],
+      "testTemplates": [
+        "According to station records, which {p} is listed for {s}?",
+        "Find the recorded {p} associated with {s}."
+      ],
+      "naturalQuestionFamilies": {
+        "located_in": [
+          [
+            "Where is {s}?",
+            "Where can I find {s}?",
+            "Which room is {s} in?"
+          ],
+          "What room contains {s}?",
+          "Where would I go to find {s}?"
+        ],
+        "location": [
+          [
+            "Where is {s}?",
+            "Where can I find {s}?",
+            "What is the location of {s}?"
+          ],
+          "Where is {s} situated?",
+          "At what place is {s} based?"
+        ],
+        "owner": [
+          [
+            "Who owns {s}?",
+            "Who is responsible for {s}?",
+            "Who looks after {s}?"
+          ],
+          "Who has responsibility for {s}?",
+          "Whose responsibility is {s}?"
+        ],
+        "director": [
+          [
+            "Who runs {s}?",
+            "Who leads {s}?",
+            "Who is in charge of {s}?"
+          ],
+          "Who oversees {s}?",
+          "Who is the person directing {s}?"
+        ],
+        "led_by": [
+          [
+            "Who leads {s}?",
+            "Who heads {s}?",
+            "Who is the lead for {s}?"
+          ],
+          "Who oversees {s}?",
+          "Who is the person leading {s}?"
+        ],
+        "quantity": [
+          [
+            "How many {s} are there?",
+            "How many units of {s} do we have?",
+            "What is the stock count for {s}?"
+          ],
+          "What quantity of {s} is on hand?",
+          "How much {s} is currently in stock?"
+        ],
+        "member_of": [
+          [
+            "Which team does {s} belong to?",
+            "What team is {s} on?",
+            "Which team includes {s}?"
+          ],
+          "What is the team membership of {s}?",
+          "Which team counts {s} as a member?"
+        ],
+        "role": [
+          [
+            "What does {s} do?",
+            "What job does {s} have?",
+            "What is the job title of {s}?"
+          ],
+          "What role does {s} perform?",
+          "In what capacity does {s} work here?"
+        ],
+        "radio_channel": [
+          [
+            "What radio channel does {s} use?",
+            "Which channel can I reach {s} on?",
+            "What is the radio channel for {s}?"
+          ],
+          "Which radio channel is assigned to {s}?",
+          "To contact {s}, which radio channel should I use?"
+        ],
+        "shift": [
+          [
+            "When is {s} on duty?",
+            "What hours does {s} work?",
+            "When is the shift for {s}?"
+          ],
+          "During which hours is {s} on shift?",
+          "What working hours are recorded for {s}?"
+        ],
+        "opens_at": [
+          [
+            "When does {s} open?",
+            "What time does {s} open?",
+            "What is the opening time of {s}?"
+          ],
+          "At which time does {s} open?",
+          "When do opening hours begin for {s}?"
+        ],
+        "status": [
+          [
+            "Is {s} operational?",
+            "What condition is {s} in?",
+            "What is the current status of {s}?"
+          ],
+          "What status does the log give {s}?",
+          "How is the operational state of {s} recorded?"
+        ],
+        "serial_number": [
+          [
+            "What is the serial number of {s}?",
+            "Which serial number belongs to {s}?",
+            "What serial is on {s}?"
+          ],
+          "What serial identifier is assigned to {s}?",
+          "Which serial identifier identifies {s}?"
+        ],
+        "inspection_day": [
+          [
+            "When is {s} inspected?",
+            "What day is inspection for {s}?",
+            "On which day do we inspect {s}?"
+          ],
+          "Which day is assigned for inspecting {s}?",
+          "What weekday is the inspection of {s}?"
+        ],
+        "floor": [
+          [
+            "What floor is {s} on?",
+            "Which floor contains {s}?",
+            "On what floor can I find {s}?"
+          ],
+          "Which floor number belongs to {s}?",
+          "What building floor houses {s}?"
+        ],
+        "capacity": [
+          [
+            "How many people fit in {s}?",
+            "What is the capacity of {s}?",
+            "How many people can {s} hold?"
+          ],
+          "What occupancy capacity is recorded for {s}?",
+          "What number of people can occupy {s}?"
+        ],
+        "reorder_threshold": [
+          [
+            "When should {s} be reordered?",
+            "What is the reorder threshold for {s}?",
+            "What stock level triggers reordering {s}?"
+          ],
+          "At what threshold is {s} due for reorder?",
+          "What is the minimum stock level before reordering {s}?"
+        ],
+        "unit": [
+          [
+            "What units are used for {s}?",
+            "How is {s} counted?",
+            "What is the unit for {s}?"
+          ],
+          "Which measurement unit is recorded for {s}?",
+          "In what units is the stock of {s} measured?"
+        ],
+        "access": [
+          [
+            "How do I access {s}?",
+            "What do I need to enter {s}?",
+            "What access is required for {s}?"
+          ],
+          "What entry requirement applies to {s}?",
+          "What credential is needed to enter {s}?"
+        ],
+        "call_sign": [
+          [
+            "What is the call sign of {s}?",
+            "What callsign does {s} use?",
+            "How is {s} identified on radio?"
+          ],
+          "Which callsign is assigned to {s}?",
+          "What radio callsign identifies {s}?"
+        ],
+        "purpose": [
+          [
+            "What is {s} for?",
+            "What is the purpose of {s}?",
+            "What does {s} research?"
+          ],
+          "What purpose is recorded for {s}?",
+          "What is the stated mission of {s}?"
+        ],
+        "focus": [
+          [
+            "What does {s} study?",
+            "What is the research focus of {s}?",
+            "What does {s} focus on?"
+          ],
+          "What research area is assigned to {s}?",
+          "What is the stated research specialty of {s}?"
+        ]
+      },
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f",
+      "files": {
+        "train.jsonl": "9e314230bc4c609090dc67d650dd2e98e4174ff8c96f86a58c7ebacac6cbd7c3",
+        "valid.jsonl": "7a36edf556f007d3b1c7aef5bca8f68282eb87d1fd321b7ba713021d8afbddfe",
+        "test.jsonl": "eaefdc3a858a8732151be9d7e93b720a07b8b6c78fe26bd827eed1a920494ed2"
+      },
+      "grounding": "Rust station-core; training traversal excludes validation/test entities; validation traversal excludes test entities"
+    },
+    "versions": {
+      "mlx-lm": "0.31.3",
+      "mlx": "0.32.2",
+      "transformers": "5.16.1",
+      "tokenizers": "0.23.2",
+      "numpy": "2.5.3"
+    }
+  },
+  "runtime": {
+    "flare": "a8cb07cf54fa43c4e41664316498ed195fa7b018",
+    "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "llamaCpp": "f3f1a8f2760f28325a5ec20c05b171e5b7c83a29",
+    "weightStorage": "Q8_0 blocks are retained for CPU prefill and GPU decode."
+  },
+  "files": {
+    "weights": {
+      "path": "/artifacts/models/aster-tuned-q8_0.gguf",
+      "bytes": 386404928,
+      "sha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1"
+    },
+    "tokenizer": {
+      "path": "/.cache/models/tokenizer.json",
+      "bytes": 2104556,
+      "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c"
+    },
+    "tokenizerConfig": {
+      "path": "/.cache/models/tokenizer_config.json",
+      "bytes": 3764,
+      "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df"
+    },
+    "config": {
+      "path": "/.cache/models/config.json",
+      "bytes": 846,
+      "sha256": "224f72354f10d617a359cc82ad15a3c96e866b9b2ffadb81997eeea9e88e22ee"
+    },
+    "generationConfig": {
+      "path": "/.cache/models/generation_config.json",
+      "bytes": 132,
+      "sha256": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013"
+    }
+  },
+  "quantizationNotes": "Q8_0 matrices; normalization F32."
+}

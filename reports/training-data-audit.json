@@ -1,0 +1,23 @@
+{
+  "train": {
+    "examples": 13641,
+    "maxTokens": 405,
+    "maskedPromptTokens": 2558559,
+    "supervisedTokens": 110198,
+    "sha256": "9e314230bc4c609090dc67d650dd2e98e4174ff8c96f86a58c7ebacac6cbd7c3"
+  },
+  "valid": {
+    "examples": 950,
+    "maxTokens": 405,
+    "maskedPromptTokens": 230936,
+    "supervisedTokens": 6684,
+    "sha256": "7a36edf556f007d3b1c7aef5bca8f68282eb87d1fd321b7ba713021d8afbddfe"
+  },
+  "test": {
+    "examples": 165,
+    "maxTokens": 404,
+    "maskedPromptTokens": 41586,
+    "supervisedTokens": 1561,
+    "sha256": "eaefdc3a858a8732151be9d7e93b720a07b8b6c78fe26bd827eed1a920494ed2"
+  }
+}

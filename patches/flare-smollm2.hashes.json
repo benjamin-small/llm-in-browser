@@ -1,0 +1,36 @@
+{
+  "flare-web/src/lib.rs": {
+    "before": "d3839d0c3e5655a9fdd2869a706bdb637291357053914115e22e40c51fe1f252",
+    "after": "cf145118564e0bf2b42dc839a72146dc63ef13f0fe65c09e844a4e69fa5b0c82",
+    "documentation_only": "5f6b927a3eb07a3da82d4473261f3d6b33e1fe429bb8386d509072cd78b9afb0"
+  },
+  "flare-loader/src/weights.rs": {
+    "before": "e4396cc661c996d60fec865382ddc6a994076ae31325c078283d04af8791ca50",
+    "after": "985fb53ce01833cea86dc206edb3703a683f5af516ff52b70343c1edd425176d",
+    "q8_only": "1e50d102456e93571d93bff86b3f3d02d11e396b5bc060040d56edfa54b03e5b"
+  },
+  "flare-loader/src/gguf.rs": {
+    "before": "40d5d00af6efd849a97ff483ffc95945cdbd58e0030fee06b8aba56b1a1d5a3b",
+    "after": "c8eecec650354352233f61a2820a593168a4fd12c6aa59a33e980c264936918a",
+    "q8_only": "c1c7b002cbf06cecf792728421506ac1513edbc02d18793cf0927055b8b07ca9"
+  },
+  "flare-gpu/src/backend.rs": {
+    "before": "ea0201f6fe228b59246c872f35f1b6c90a674fcfda8893f2c15705d6e08516b3",
+    "after": "dfd44191148a48531d46a1ee5e7c856a14e673a7dda06cebce9e7ac6d18d23f1"
+  },
+  "Cargo.lock": {
+    "prior_local": "e65d7df0f79dfa66fdc000b18e140feec05966f74b3bd852b3ecece90618bad8",
+    "before": "e65d7df0f79dfa66fdc000b18e140feec05966f74b3bd852b3ecece90618bad8",
+    "after": "790106ac1fbd51ca550588e56bfa62b67c1816a82bbef5e5bc37d36a8996a030"
+  },
+  "flare-core/Cargo.toml": {
+    "prior_local": "311d99175b961bfff66a9f4a17b6eb045d68c85fc98540d554b7525d6bc890a4",
+    "before": "311d99175b961bfff66a9f4a17b6eb045d68c85fc98540d554b7525d6bc890a4",
+    "after": "35b4c35acbcf4532b3f6b2997fe2373ae81cef0ffc7d7dc099147d7ebc742a96"
+  },
+  "flare-core/src/tokenizer.rs": {
+    "prior_local": "cb89974168b341342cd203c34f33b34189cd6c5bd3df4b554e5475ca1ca1d1f3",
+    "before": "cb89974168b341342cd203c34f33b34189cd6c5bd3df4b554e5475ca1ca1d1f3",
+    "after": "3a9296ab400a1d83501c90edba82ebb8e49c0e54e74913a228a53d3222500970"
+  }
+}

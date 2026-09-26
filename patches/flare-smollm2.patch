@@ -1,0 +1,503 @@
+--- a/flare-web/src/lib.rs
++++ b/flare-web/src/lib.rs
+@@ -1771,7 +1771,7 @@
+     /// engine.begin_stream(promptIds, 128);
+     /// function tick() {
+     ///   const id = engine.next_token();
+-    ///   if (id === undefined) { /* done */ return; }
++    ///   if (id === undefined) { return; }
+     ///   output.textContent += tokenizer.decode_one(id);
+     ///   requestAnimationFrame(tick);   // yield to browser, then continue
+     /// }
+@@ -1962,11 +1962,12 @@
+         // batched_dequant_matmul path (2×4 tile on aarch64 / 2×2 on wasm+
+         // simd128) instead of N sequential single-token forward() calls.
+         // Dramatically lower TTFT on multi-token prompts.
+-        let pos = if effective.is_empty() {
++        let pos = if effective.len() < 2 {
+             0
+         } else {
+-            let _ = self.model.forward_prefill(&effective);
+-            effective.len()
++            let last_idx = effective.len() - 1;
++            let _ = self.model.forward_prefill(&effective[..last_idx]);
++            last_idx
+         };
+         self.last_prefill_ms = now_ms() - t0;
+         self.last_decode_ms = 0.0;
+@@ -2002,11 +2003,12 @@
+     async fn begin_stream_async_impl(&mut self, prompt_tokens: &[u32], max_tokens: u32) {
+         let effective = self.with_bos(prompt_tokens);
+         let t0 = now_ms();
+-        let pos = if effective.is_empty() {
++        let pos = if effective.len() < 2 {
+             0
+         } else {
+-            let _ = self.model.forward_prefill(&effective);
+-            effective.len()
++            let last_idx = effective.len() - 1;
++            let _ = self.model.forward_prefill(&effective[..last_idx]);
++            last_idx
+         };
+         self.last_prefill_ms = now_ms() - t0;
+         self.last_decode_ms = 0.0;
+--- a/flare-loader/src/weights.rs
++++ b/flare-loader/src/weights.rs
+@@ -34,7 +34,8 @@
+     R: Read + Seek,
+     F: Fn(usize, usize),
+ {
+-    let tensors = gguf.load_all_tensors(reader)?;
++    let mut tensors = gguf.load_all_tensors(reader)?;
++    normalize_llama_gguf_rope(gguf, &mut tensors, &mut HashMap::new())?;
+     let config = gguf.to_model_config()?;
+ 
+     // Token embedding — try common name variants
+@@ -145,9 +146,14 @@
+ /// the maps tensor-by-tensor.
+ pub fn assemble_model_weights_from_maps(
+     gguf: &GgufFile,
+-    tensors: HashMap<String, flare_core::tensor::Tensor>,
++    mut tensors: HashMap<String, flare_core::tensor::Tensor>,
+     mut raw_map: HashMap<String, RawWeight>,
+ ) -> Result<(ModelWeights, Option<Vec<RawLayerWeights>>), GgufError> {
++    normalize_llama_gguf_rope(gguf, &mut tensors, &mut raw_map)?;
++    #[cfg(target_arch = "wasm32")]
++    for weight in raw_map.values_mut() {
++        expand_q4_0_for_cpu(weight)?;
++    }
+     let config = gguf.to_model_config()?;
+ 
+     let token_embedding = find_tensor(
+@@ -185,9 +191,87 @@
+     Ok((weights, raw_layers))
+ }
+ 
+-/// Take ownership of the 7 per-layer raw weight tensors from the raw-weight
+-/// map.  Returns `None` and leaves the map partially drained if any are
+-/// missing (callers discard the drained entries).
++// WASM prefill/warmup uses CPU kernels, which support raw Q8_0 but not Q4_0.
++// Keep each original f16 scale and unpack signed nibbles into Q8_0 bytes.
++// This changes storage only: every decoded weight is bit-for-bit identical.
++// GPU decoding uses the expanded representation too; native loading is unchanged.
++#[cfg(any(target_arch = "wasm32", test))]
++pub(crate) fn expand_q4_0_for_cpu(weight: &mut RawWeight) -> Result<(), GgufError> {
++    use flare_core::model::WeightFormat;
++    if weight.format != WeightFormat::Q4_0 { return Ok(()); }
++    let blocks = weight.num_rows.checked_mul(weight.blocks_per_row)
++        .ok_or_else(|| GgufError::InvalidFormat("Q4_0 block count overflow".into()))?;
++    let expected = blocks.checked_mul(18)
++        .ok_or_else(|| GgufError::InvalidFormat("Q4_0 byte count overflow".into()))?;
++    if weight.data.len() != expected {
++        return Err(GgufError::InvalidFormat("Malformed Q4_0 blocks".into()));
++    }
++    let capacity = blocks.checked_mul(34)
++        .ok_or_else(|| GgufError::InvalidFormat("Q8_0 byte count overflow".into()))?;
++    let mut expanded = Vec::with_capacity(capacity);
++    for block in weight.data.chunks_exact(18) {
++        expanded.extend_from_slice(&block[..2]);
++        for &packed in &block[2..] { expanded.push(((packed & 15) as i8 - 8) as u8); }
++        for &packed in &block[2..] { expanded.push(((packed >> 4) as i8 - 8) as u8); }
++    }
++    weight.data = expanded;
++    weight.format = WeightFormat::Q8_0;
++    Ok(())
++}
++
++// llama.cpp's Llama GGUF exporter interleaves Q/K rows for adjacent-pair RoPE.
++// Flare rotates split halves (as in the original Hugging Face model). Restore
++// that row layout at the GGUF boundary, including the raw quantized GPU weights.
++// Safetensors and other architectures must retain their existing layout.
++fn normalize_llama_gguf_rope(
++    gguf: &GgufFile,
++    tensors: &mut HashMap<String, Tensor>,
++    raw_map: &mut HashMap<String, RawWeight>,
++) -> Result<(), GgufError> {
++    if gguf.architecture() != Some("llama") { return Ok(()); }
++    let config = gguf.to_model_config()?;
++    for layer in 0..config.num_layers {
++        for (kind, heads) in [("q", config.num_heads), ("k", config.num_kv_heads)] {
++            for suffix in ["weight", "bias"] {
++                let name = format!("blk.{layer}.attn_{kind}.{suffix}");
++                let rows = heads * config.head_dim;
++                if let Some(tensor) = tensors.get_mut(&name) {
++                    // The browser may intentionally omit the f32 copy.
++                    if !tensor.data().is_empty() {
++                        undo_interleaved_rows(tensor.data_mut(), rows, heads)?;
++                    }
++                }
++                if let Some(raw) = raw_map.get_mut(&name) {
++                    if raw.num_rows != rows {
++                        return Err(GgufError::InvalidFormat(format!("Unexpected Q/K shape: {name}")));
++                    }
++                    undo_interleaved_rows(&mut raw.data, rows, heads)?;
++                }
++            }
++        }
++    }
++    Ok(())
++}
++
++pub(crate) fn undo_interleaved_rows<T: Copy>(data: &mut [T], rows: usize, heads: usize) -> Result<(), GgufError> {
++    if heads == 0 || rows == 0 || rows % (2 * heads) != 0 || data.len() % rows != 0 {
++        return Err(GgufError::InvalidFormat("Invalid Llama rotary weight dimensions".into()));
++    }
++    let cols = data.len() / rows;
++    let dim = rows / heads;
++    let original = data.to_vec();
++    for head in 0..heads {
++        for row in 0..dim {
++            let source_row = head * dim + 2 * (row % (dim / 2)) + row / (dim / 2);
++            let target_row = head * dim + row;
++            data[target_row * cols..(target_row + 1) * cols]
++                .copy_from_slice(&original[source_row * cols..(source_row + 1) * cols]);
++        }
++    }
++    Ok(())
++}
++
++/// Take ownership of a layer's seven raw weight tensors.
+ fn assemble_raw_layer(
+     raw_map: &mut HashMap<String, RawWeight>,
+     i: usize,
+@@ -654,6 +738,22 @@
+     use super::*;
+     use flare_core::tensor::Tensor;
+ 
++    #[test]
++    fn llama_gguf_rotary_layout_restores_each_head_and_whole_rows() {
++        // Two independent heads, four rows per head, two values per row.
++        // The GGUF exporter interleaves the first and second half of each head.
++        let mut gguf = vec![0, 1, 4, 5, 2, 3, 6, 7, 8, 9, 12, 13, 10, 11, 14, 15];
++        undo_interleaved_rows(&mut gguf, 8, 2).unwrap();
++        assert_eq!(gguf, (0..16).collect::<Vec<_>>());
++    }
++
++    #[test]
++    fn llama_gguf_rotary_layout_rejects_malformed_shapes() {
++        assert!(undo_interleaved_rows(&mut [1, 2, 3], 3, 1).is_err());
++        assert!(undo_interleaved_rows(&mut [1, 2, 3], 4, 1).is_err());
++        assert!(undo_interleaved_rows(&mut [1, 2], 2, 0).is_err());
++    }
++
+     fn small_tensor(size: usize) -> Tensor {
+         Tensor::from_vec(vec![0.1; size], &[size]).unwrap()
+     }
+@@ -926,6 +1026,33 @@
+     }
+ 
+     #[test]
++    fn test_q4_0_expansion_preserves_signed_nibbles_and_scales() {
++        use flare_core::model::WeightFormat;
++        let mut data = Vec::new();
++        for scale in [0x3c00u16, 0xbc00u16] {
++            data.extend_from_slice(&scale.to_le_bytes());
++            data.extend((0u8..16).map(|i| i | ((15-i) << 4)));
++        }
++        let mut raw = RawWeight { data, format: WeightFormat::Q4_0, num_rows: 2, blocks_per_row: 1 };
++        expand_q4_0_for_cpu(&mut raw).unwrap();
++        assert_eq!(raw.format, WeightFormat::Q8_0);
++        assert_eq!(raw.data.len(), 68);
++        for (block, scale) in raw.data.chunks_exact(34).zip([0x3c00u16, 0xbc00u16]) {
++            assert_eq!(&block[..2], &scale.to_le_bytes());
++            for i in 0..16 {
++                assert_eq!(block[2+i] as i8, i as i8-8);
++                assert_eq!(block[18+i] as i8, 7-i as i8);
++            }
++        }
++    }
++
++    #[test]
++    fn test_q4_0_expansion_rejects_short_blocks() {
++        let mut raw = RawWeight { data: vec![0;17], format: flare_core::model::WeightFormat::Q4_0, num_rows: 1, blocks_per_row: 1 };
++        assert!(expand_q4_0_for_cpu(&mut raw).is_err());
++    }
++
++    #[test]
+     fn test_load_layer_optional_bias_absent() {
+         // When no bias tensors are present, attn_q_bias / k_bias / v_bias must be None
+         let tensors = build_gguf_tensors(1);
+--- a/flare-loader/src/gguf.rs
++++ b/flare-loader/src/gguf.rs
+@@ -641,12 +641,14 @@
+         let col_elements = info.dimensions.iter().rev().skip(1).product::<u64>().max(1) as usize;
+         let blocks_per_row = col_elements.div_ceil(weights_per_block);
+ 
+-        Ok(Some(RawWeight {
+-            data: raw,
+-            format,
+-            num_rows,
+-            blocks_per_row,
+-        }))
++        let weight = RawWeight { data: raw, format, num_rows, blocks_per_row };
++        #[cfg(target_arch = "wasm32")]
++        let weight = {
++            let mut weight = weight;
++            crate::weights::expand_q4_0_for_cpu(&mut weight)?;
++            weight
++        };
++        Ok(Some(weight))
+     }
+ 
+     /// Load raw (non-dequantized) layer weights for a single transformer layer.
+@@ -670,7 +672,14 @@
+         let w_down = self.read_raw_weight(reader, &format!("blk.{i}.ffn_down.weight"))?;
+ 
+         match (wq, wk, wv, wo, w_gate, w_up, w_down) {
+-            (Some(wq), Some(wk), Some(wv), Some(wo), Some(w_gate), Some(w_up), Some(w_down)) => {
++            (Some(mut wq), Some(mut wk), Some(wv), Some(wo), Some(w_gate), Some(w_up), Some(w_down)) => {
++                // Match the GGUF assembly path when callers attach raw weights
++                // separately after loading the f32 model.
++                if self.architecture() == Some("llama") {
++                    let config = self.to_model_config()?;
++                    crate::weights::undo_interleaved_rows(&mut wq.data, wq.num_rows, config.num_heads)?;
++                    crate::weights::undo_interleaved_rows(&mut wk.data, wk.num_rows, config.num_kv_heads)?;
++                }
+                 Ok(Some(RawLayerWeights {
+                     wq,
+                     wk,
+--- a/flare-gpu/src/backend.rs
++++ b/flare-gpu/src/backend.rs
+@@ -230,6 +230,15 @@
+         // Enable optional features if the backend supports them.
+         // Requesting an absent feature is an error, so we check first.
+         let adapter_features = adapter.features();
++        let adapter_limits = adapter.limits();
++        // The 4096-score attention shaders also need reduction scratch space.
++        // Default wgpu limits expose only 16 KiB, invalidating these pipelines
++        // even when the physical adapter supports 32 KiB or more.
++        if adapter_limits.max_compute_workgroup_storage_size < 16_672 {
++            return Err(GpuError::DeviceRequest(
++                "Flare attention needs at least 16672 bytes of workgroup storage".into(),
++            ));
++        }
+         let mut extra_features = wgpu::Features::empty();
+ 
+         // PIPELINE_CACHE: reuse compiled GPU machine code across sessions (Vulkan).
+@@ -261,6 +270,7 @@
+                     required_limits: wgpu::Limits {
+                         max_buffer_size: 1 << 30,                 // 1 GiB
+                         max_storage_buffer_binding_size: 1 << 30, // 1 GiB
++                        max_compute_workgroup_storage_size: adapter_limits.max_compute_workgroup_storage_size,
+                         ..wgpu::Limits::default()
+                     },
+                     ..Default::default()
+@@ -3969,6 +3979,7 @@
+         num_layers: usize,
+         seq_len: usize,
+     ) -> Vec<f32> {
++        self.device.push_error_scope(wgpu::ErrorFilter::Validation);
+         let (staging, _size) = self.forward_single_token_gpu_submit(
+             token_embedding,
+             pos,
+@@ -3983,6 +3994,9 @@
+             num_layers,
+             seq_len,
+         );
++        if let Some(error) = self.device.pop_error_scope().await {
++            panic!("Flare GPU command validation failed: {error}");
++        }
+ 
+         let slice = staging.slice(..);
+         let (tx, rx) = futures_channel::oneshot::channel();
+--- a/Cargo.lock
++++ b/Cargo.lock
+@@ -1,6 +1,15 @@
+ # This file is automatically @generated by Cargo.
+ # It is not intended for manual editing.
+ version = 4
++
++[[package]]
++name = "aho-corasick"
++version = "1.1.5"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "c982642fa9e8606056828ee9a8505737230110bb1099153c79efe865c59d12ba"
++dependencies = [
++ "memchr",
++]
+ 
+ [[package]]
+ name = "android_system_properties"
+@@ -418,6 +427,7 @@
+  "byteorder",
+  "log",
+  "rayon",
++ "regex",
+  "serde",
+  "serde_json",
+  "thiserror 2.0.18",
+@@ -1357,6 +1367,29 @@
+ checksum = "ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d"
+ dependencies = [
+  "bitflags 2.11.0",
++]
++
++[[package]]
++name = "regex"
++version = "1.12.3"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "e10754a14b9137dd7b1e3e5b0493cc9171fdd105e0ab477f51b72e7f3ac0e276"
++dependencies = [
++ "aho-corasick",
++ "memchr",
++ "regex-automata",
++ "regex-syntax",
++]
++
++[[package]]
++name = "regex-automata"
++version = "0.4.18"
++source = "registry+https://github.com/rust-lang/crates.io-index"
++checksum = "ad8553b9b26413251cbf30e620595c7a41b3887f03da04579c0e6b0d6a06b4b2"
++dependencies = [
++ "aho-corasick",
++ "memchr",
++ "regex-syntax",
+ ]
+ 
+ [[package]]
+--- a/flare-core/Cargo.toml
++++ b/flare-core/Cargo.toml
+@@ -18,6 +18,7 @@
+ log = { workspace = true }
+ serde = { workspace = true }
+ serde_json = { workspace = true }
++regex = "=1.12.3"
+ 
+ [features]
+ default = []
+--- a/flare-core/src/tokenizer.rs
++++ b/flare-core/src/tokenizer.rs
+@@ -31,6 +31,8 @@
+     model: ModelSection,
+     #[serde(default)]
+     added_tokens: Vec<AddedToken>,
++    #[serde(default)]
++    pre_tokenizer: Option<serde_json::Value>,
+ }
+ 
+ #[derive(Deserialize)]
+@@ -73,6 +75,7 @@
+     /// BOS / EOS
+     bos_id: Option<u32>,
+     eos_id: Option<u32>,
++    digits_byte_level: bool,
+ }
+ 
+ impl BpeTokenizer {
+@@ -81,6 +84,17 @@
+         let tj: TokenizerJson =
+             serde_json::from_str(json).map_err(|e| TokenizerError::LoadError(e.to_string()))?;
+ 
++        // Honor the selected model's Digits(individual) -> ByteLevel sequence.
++        // Other tokenizer pipelines retain their existing behavior.
++        let digits_byte_level = tj.pre_tokenizer.as_ref().is_some_and(|pre| {
++            pre["type"] == "Sequence" && pre["pretokenizers"].as_array().is_some_and(|parts| {
++                parts.len() == 2 && parts[0]["type"] == "Digits"
++                    && parts[0]["individual_digits"] == true
++                    && parts[1]["type"] == "ByteLevel"
++                    && parts[1]["add_prefix_space"] == false
++                    && parts[1]["use_regex"] == true
++            })
++        });
+         let vocab = tj.model.vocab;
+ 
+         // Build reverse map
+@@ -140,6 +154,7 @@
+             special_token_strings,
+             bos_id,
+             eos_id,
++            digits_byte_level,
+         })
+     }
+ 
+@@ -163,6 +178,7 @@
+             special_token_strings: HashMap::new(),
+             bos_id,
+             eos_id,
++            digits_byte_level: false,
+         }
+     }
+ 
+@@ -262,6 +278,60 @@
+     }
+ }
+ 
++
++// Equivalent to Digits(individual_digits=true), followed by GPT-2 ByteLevel.
++// Rust regex lacks lookahead; handle the whitespace negative lookahead explicitly.
++fn smollm_pieces(text: &str) -> Vec<&str> {
++    use std::sync::OnceLock;
++    static DIGITS: OnceLock<regex::Regex> = OnceLock::new();
++    static BYTE_LEVEL: OnceLock<regex::Regex> = OnceLock::new();
++    let digits = DIGITS.get_or_init(|| regex::Regex::new(r"\p{N}").unwrap());
++    let byte_level = BYTE_LEVEL.get_or_init(|| regex::Regex::new(
++        r"'s|'t|'re|'ve|'m|'ll|'d| ?\p{L}+| ?\p{N}+| ?[^\s\p{L}\p{N}]+|\s+"
++    ).unwrap());
++    let mut segments = Vec::new();
++    let mut start = 0;
++    for digit in digits.find_iter(text) {
++        if start < digit.start() { segments.push(&text[start..digit.start()]); }
++        segments.push(digit.as_str());
++        start = digit.end();
++    }
++    if start < text.len() { segments.push(&text[start..]); }
++    let mut pieces = Vec::new();
++    for segment in segments {
++        let mut offset = 0;
++        while let Some(m) = byte_level.find_at(segment, offset) {
++            let mut end = m.end();
++            if end < segment.len() && m.as_str().chars().all(char::is_whitespace) {
++                // \s+(?!\S) consumes all but the last whitespace before text.
++                // That last character is then matched independently, or prefixes a word.
++                let last = m.as_str().char_indices().last().unwrap().0;
++                if last > 0 { end = m.start() + last; }
++            }
++            pieces.push(&segment[m.start()..end]);
++            offset = end;
++        }
++    }
++    pieces
++}
++
++#[cfg(test)]
++mod smollm_pre_tests {
++    use super::*;
++    #[test]
++    fn blank_lines_and_space_prefixes_follow_byte_level_boundaries() {
++        assert_eq!(smollm_pieces("a\n\nb"), vec!["a", "\n", "\n", "b"]);
++        assert_eq!(smollm_pieces("a  b"), vec!["a", " ", " b"]);
++        assert_eq!(smollm_pieces("x\n\n"), vec!["x", "\n\n"]);
++    }
++    #[test]
++    fn digit_split_precedes_byte_level_and_preserves_unicode() {
++        assert_eq!(smollm_pieces("a\n\n123"), vec!["a", "\n\n", "1", "2", "3"]);
++        assert_eq!(smollm_pieces("Hello, don't 123! café\t\tend"),
++            vec!["Hello", ",", " don", "'t", " ", "1", "2", "3", "!", " café", "\t", "\t", "end"]);
++    }
++}
++
+ impl Tokenizer for BpeTokenizer {
+     fn encode(&self, text: &str) -> Result<Vec<u32>, TokenizerError> {
+         if text.is_empty() {
+@@ -286,8 +356,10 @@
+                 continue;
+             }
+ 
+-            // Convert chunk to initial character tokens
+-            let initial = self.text_to_initial_tokens(chunk);
++            let pieces = if self.digits_byte_level { smollm_pieces(chunk) } else { vec![chunk] };
++            for piece in pieces {
++            // Never merge across the pre-tokenizer's boundaries.
++            let initial = self.text_to_initial_tokens(piece);
+ 
+             // Apply BPE merges
+             let merged = self.bpe_merge(&initial);
+@@ -323,6 +395,7 @@
+             }
+         }
+ 
++        }
+         Ok(output_ids)
+     }
+ 

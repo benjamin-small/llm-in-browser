@@ -1,0 +1,9 @@
+{
+  "flare": "a8cb07cf54fa43c4e41664316498ed195fa7b018",
+  "llama_cpp": "f3f1a8f2760f28325a5ec20c05b171e5b7c83a29",
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "model_revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "gguf_repository": "HuggingFaceTB/SmolLM2-360M-Instruct-GGUF",
+  "gguf_revision": "593b5a2e04c8f3e4ee880263f93e0bd2901ad47f",
+  "gguf_file": "smollm2-360m-instruct-q8_0.gguf"
+}

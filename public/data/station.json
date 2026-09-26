@@ -1,0 +1,4497 @@
+{
+  "schemaVersion": 1,
+  "datasetVersion": "aster-1.2.0",
+  "name": "Aster Research Station",
+  "entities": [
+    {
+      "id": "station",
+      "label": "Aster Research Station",
+      "kind": "station",
+      "aliases": [
+        "Aster",
+        "the station"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-01",
+      "label": "Operations Team",
+      "kind": "team",
+      "aliases": [
+        "Operations"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-02",
+      "label": "Ocean Team",
+      "kind": "team",
+      "aliases": [
+        "Ocean"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-03",
+      "label": "Atmosphere Team",
+      "kind": "team",
+      "aliases": [
+        "Atmosphere"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-04",
+      "label": "Robotics Team",
+      "kind": "team",
+      "aliases": [
+        "Robotics"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-05",
+      "label": "Ecology Team",
+      "kind": "team",
+      "aliases": [
+        "Ecology"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "team-06",
+      "label": "Logistics Team",
+      "kind": "team",
+      "aliases": [
+        "Logistics"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-01",
+      "label": "Room R-01",
+      "kind": "room",
+      "aliases": [
+        "R-01",
+        "reception"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-02",
+      "label": "Room R-02",
+      "kind": "room",
+      "aliases": [
+        "R-02"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-03",
+      "label": "Room R-03",
+      "kind": "room",
+      "aliases": [
+        "R-03"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-04",
+      "label": "Room R-04",
+      "kind": "room",
+      "aliases": [
+        "R-04"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-05",
+      "label": "Room R-05",
+      "kind": "room",
+      "aliases": [
+        "R-05"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-06",
+      "label": "Room R-06",
+      "kind": "room",
+      "aliases": [
+        "R-06"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-07",
+      "label": "Room R-07",
+      "kind": "room",
+      "aliases": [
+        "R-07"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-08",
+      "label": "Room R-08",
+      "kind": "room",
+      "aliases": [
+        "R-08"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-09",
+      "label": "Room R-09",
+      "kind": "room",
+      "aliases": [
+        "R-09"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-10",
+      "label": "Room R-10",
+      "kind": "room",
+      "aliases": [
+        "R-10"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-11",
+      "label": "Room R-11",
+      "kind": "room",
+      "aliases": [
+        "R-11"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "room-12",
+      "label": "Room R-12",
+      "kind": "room",
+      "aliases": [
+        "R-12"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-01",
+      "label": "Mira Vale",
+      "kind": "person",
+      "aliases": [
+        "Mira"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-02",
+      "label": "Elena Ortiz",
+      "kind": "person",
+      "aliases": [
+        "Elena"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-03",
+      "label": "Samir Chen",
+      "kind": "person",
+      "aliases": [
+        "Samir"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-04",
+      "label": "Tessa Holt",
+      "kind": "person",
+      "aliases": [
+        "Tessa"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-05",
+      "label": "Jun Park",
+      "kind": "person",
+      "aliases": [
+        "Jun"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-06",
+      "label": "Ada Brooks",
+      "kind": "person",
+      "aliases": [
+        "Ada"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-07",
+      "label": "Morgan Reed",
+      "kind": "person",
+      "aliases": [
+        "Morgan"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-08",
+      "label": "Morgan Hale",
+      "kind": "person",
+      "aliases": [
+        "Morgan"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-09",
+      "label": "Nico Ames",
+      "kind": "person",
+      "aliases": [
+        "Nico"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-10",
+      "label": "Lena Shah",
+      "kind": "person",
+      "aliases": [
+        "Lena"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-11",
+      "label": "Owen Moss",
+      "kind": "person",
+      "aliases": [
+        "Owen"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-12",
+      "label": "Iris Cole",
+      "kind": "person",
+      "aliases": [
+        "Iris"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-13",
+      "label": "Theo Lin",
+      "kind": "person",
+      "aliases": [
+        "Theo"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-14",
+      "label": "Zara Quinn",
+      "kind": "person",
+      "aliases": [
+        "Zara"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-15",
+      "label": "Leo Finch",
+      "kind": "person",
+      "aliases": [
+        "Leo"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-16",
+      "label": "Nora West",
+      "kind": "person",
+      "aliases": [
+        "Nora"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-17",
+      "label": "Emil Ross",
+      "kind": "person",
+      "aliases": [
+        "Emil"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-18",
+      "label": "Sofia Frost",
+      "kind": "person",
+      "aliases": [
+        "Sofia"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-19",
+      "label": "Arun Lake",
+      "kind": "person",
+      "aliases": [
+        "Arun"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-20",
+      "label": "Maya Stone",
+      "kind": "person",
+      "aliases": [
+        "Maya"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-21",
+      "label": "Eli Ward",
+      "kind": "person",
+      "aliases": [
+        "Eli"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-22",
+      "label": "Rosa Bell",
+      "kind": "person",
+      "aliases": [
+        "Rosa"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-23",
+      "label": "Kai Wells",
+      "kind": "person",
+      "aliases": [
+        "Kai"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "person-24",
+      "label": "Dara Snow",
+      "kind": "person",
+      "aliases": [
+        "Dara"
+      ],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-01",
+      "label": "Oxygen Sensor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-02",
+      "label": "Water Pump",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-03",
+      "label": "Weather Mast",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-04",
+      "label": "Survey Drone",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-05",
+      "label": "Sample Freezer",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-06",
+      "label": "Backup Radio",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-07",
+      "label": "Air Scrubber",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-08",
+      "label": "Salinity Probe",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-09",
+      "label": "Pressure Gauge",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-10",
+      "label": "Solar Inverter",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-11",
+      "label": "Thermal Camera",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-12",
+      "label": "Dock Beacon",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-13",
+      "label": "Sonar Array",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-14",
+      "label": "Battery Monitor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-15",
+      "label": "Particle Counter",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-16",
+      "label": "Lab Centrifuge",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-17",
+      "label": "Humidity Sensor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-18",
+      "label": "Navigation Tablet",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-19",
+      "label": "Emergency Lantern",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-20",
+      "label": "Water Purifier",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-21",
+      "label": "Wind Turbine",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-22",
+      "label": "Microscope",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-23",
+      "label": "Autoclave",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-24",
+      "label": "Data Logger",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-25",
+      "label": "Seismic Monitor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-26",
+      "label": "Flow Meter",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-27",
+      "label": "Satellite Modem",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-28",
+      "label": "Workshop Printer",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-29",
+      "label": "CO2 Sensor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-30",
+      "label": "Refrigerator",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-31",
+      "label": "Spectrometer",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-32",
+      "label": "Depth Sensor",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "device-33",
+      "label": "Charger",
+      "kind": "equipment",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-01",
+      "label": "Spare Filters",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-02",
+      "label": "Sample Vials",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-03",
+      "label": "Radio Batteries",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-04",
+      "label": "Nitrile Gloves",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-05",
+      "label": "Cable Ties",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-06",
+      "label": "Probe Caps",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-07",
+      "label": "Lens Wipes",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-08",
+      "label": "Seal Kits",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-09",
+      "label": "Coolant Bottles",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-10",
+      "label": "Storage Drives",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-11",
+      "label": "Label Rolls",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-12",
+      "label": "Test Strips",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-13",
+      "label": "Cleaning Cloths",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-14",
+      "label": "Fuse Packs",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-15",
+      "label": "Connector Kits",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-16",
+      "label": "Packing Foam",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-17",
+      "label": "Tape Rolls",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-18",
+      "label": "Marker Pens",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-19",
+      "label": "Desiccant Bags",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-20",
+      "label": "O Rings",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-21",
+      "label": "Notebook Packs",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-22",
+      "label": "Pipette Tips",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-23",
+      "label": "Tool Bits",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    },
+    {
+      "id": "supply-24",
+      "label": "Calibration Fluids",
+      "kind": "supply",
+      "aliases": [],
+      "properties": {
+        "fictional": "true"
+      }
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-station-director",
+      "subject": "station",
+      "predicate": "director",
+      "value": null,
+      "object": "person-01"
+    },
+    {
+      "id": "f-station-location",
+      "subject": "station",
+      "predicate": "location",
+      "value": "Pelican Atoll",
+      "object": null
+    },
+    {
+      "id": "f-station-call_sign",
+      "subject": "station",
+      "predicate": "call_sign",
+      "value": "ASTER-7",
+      "object": null
+    },
+    {
+      "id": "f-station-opens_at",
+      "subject": "station",
+      "predicate": "opens_at",
+      "value": "08:30",
+      "object": null
+    },
+    {
+      "id": "f-station-purpose",
+      "subject": "station",
+      "predicate": "purpose",
+      "value": "Coastal research",
+      "object": null
+    },
+    {
+      "id": "f-team-01-led_by",
+      "subject": "team-01",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-01"
+    },
+    {
+      "id": "f-team-01-located_in",
+      "subject": "team-01",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-team-01-radio_channel",
+      "subject": "team-01",
+      "predicate": "radio_channel",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-team-01-shift",
+      "subject": "team-01",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-01-focus",
+      "subject": "team-01",
+      "predicate": "focus",
+      "value": "operations research",
+      "object": null
+    },
+    {
+      "id": "f-team-02-led_by",
+      "subject": "team-02",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-02"
+    },
+    {
+      "id": "f-team-02-located_in",
+      "subject": "team-02",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-team-02-radio_channel",
+      "subject": "team-02",
+      "predicate": "radio_channel",
+      "value": "12",
+      "object": null
+    },
+    {
+      "id": "f-team-02-shift",
+      "subject": "team-02",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-02-focus",
+      "subject": "team-02",
+      "predicate": "focus",
+      "value": "ocean research",
+      "object": null
+    },
+    {
+      "id": "f-team-03-led_by",
+      "subject": "team-03",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-03"
+    },
+    {
+      "id": "f-team-03-located_in",
+      "subject": "team-03",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-team-03-radio_channel",
+      "subject": "team-03",
+      "predicate": "radio_channel",
+      "value": "13",
+      "object": null
+    },
+    {
+      "id": "f-team-03-shift",
+      "subject": "team-03",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-03-focus",
+      "subject": "team-03",
+      "predicate": "focus",
+      "value": "atmosphere research",
+      "object": null
+    },
+    {
+      "id": "f-team-04-led_by",
+      "subject": "team-04",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-04"
+    },
+    {
+      "id": "f-team-04-located_in",
+      "subject": "team-04",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-team-04-radio_channel",
+      "subject": "team-04",
+      "predicate": "radio_channel",
+      "value": "14",
+      "object": null
+    },
+    {
+      "id": "f-team-04-shift",
+      "subject": "team-04",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-04-focus",
+      "subject": "team-04",
+      "predicate": "focus",
+      "value": "robotics research",
+      "object": null
+    },
+    {
+      "id": "f-team-05-led_by",
+      "subject": "team-05",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-05"
+    },
+    {
+      "id": "f-team-05-located_in",
+      "subject": "team-05",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-team-05-radio_channel",
+      "subject": "team-05",
+      "predicate": "radio_channel",
+      "value": "15",
+      "object": null
+    },
+    {
+      "id": "f-team-05-shift",
+      "subject": "team-05",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-05-focus",
+      "subject": "team-05",
+      "predicate": "focus",
+      "value": "ecology research",
+      "object": null
+    },
+    {
+      "id": "f-team-06-led_by",
+      "subject": "team-06",
+      "predicate": "led_by",
+      "value": null,
+      "object": "person-06"
+    },
+    {
+      "id": "f-team-06-located_in",
+      "subject": "team-06",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-team-06-radio_channel",
+      "subject": "team-06",
+      "predicate": "radio_channel",
+      "value": "16",
+      "object": null
+    },
+    {
+      "id": "f-team-06-shift",
+      "subject": "team-06",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-team-06-focus",
+      "subject": "team-06",
+      "predicate": "focus",
+      "value": "logistics research",
+      "object": null
+    },
+    {
+      "id": "f-room-01-floor",
+      "subject": "room-01",
+      "predicate": "floor",
+      "value": "1",
+      "object": null
+    },
+    {
+      "id": "f-room-01-capacity",
+      "subject": "room-01",
+      "predicate": "capacity",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-room-01-owner",
+      "subject": "room-01",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-room-01-opens_at",
+      "subject": "room-01",
+      "predicate": "opens_at",
+      "value": "08:00",
+      "object": null
+    },
+    {
+      "id": "f-room-01-access",
+      "subject": "room-01",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-02-floor",
+      "subject": "room-02",
+      "predicate": "floor",
+      "value": "1",
+      "object": null
+    },
+    {
+      "id": "f-room-02-capacity",
+      "subject": "room-02",
+      "predicate": "capacity",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-room-02-owner",
+      "subject": "room-02",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-room-02-opens_at",
+      "subject": "room-02",
+      "predicate": "opens_at",
+      "value": "09:00",
+      "object": null
+    },
+    {
+      "id": "f-room-02-access",
+      "subject": "room-02",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-03-floor",
+      "subject": "room-03",
+      "predicate": "floor",
+      "value": "1",
+      "object": null
+    },
+    {
+      "id": "f-room-03-capacity",
+      "subject": "room-03",
+      "predicate": "capacity",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-room-03-owner",
+      "subject": "room-03",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-room-03-opens_at",
+      "subject": "room-03",
+      "predicate": "opens_at",
+      "value": "07:00",
+      "object": null
+    },
+    {
+      "id": "f-room-03-access",
+      "subject": "room-03",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-04-floor",
+      "subject": "room-04",
+      "predicate": "floor",
+      "value": "1",
+      "object": null
+    },
+    {
+      "id": "f-room-04-capacity",
+      "subject": "room-04",
+      "predicate": "capacity",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-room-04-owner",
+      "subject": "room-04",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-room-04-opens_at",
+      "subject": "room-04",
+      "predicate": "opens_at",
+      "value": "08:00",
+      "object": null
+    },
+    {
+      "id": "f-room-04-access",
+      "subject": "room-04",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-05-floor",
+      "subject": "room-05",
+      "predicate": "floor",
+      "value": "2",
+      "object": null
+    },
+    {
+      "id": "f-room-05-capacity",
+      "subject": "room-05",
+      "predicate": "capacity",
+      "value": "4",
+      "object": null
+    },
+    {
+      "id": "f-room-05-owner",
+      "subject": "room-05",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-room-05-opens_at",
+      "subject": "room-05",
+      "predicate": "opens_at",
+      "value": "09:00",
+      "object": null
+    },
+    {
+      "id": "f-room-05-access",
+      "subject": "room-05",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-06-floor",
+      "subject": "room-06",
+      "predicate": "floor",
+      "value": "2",
+      "object": null
+    },
+    {
+      "id": "f-room-06-capacity",
+      "subject": "room-06",
+      "predicate": "capacity",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-room-06-owner",
+      "subject": "room-06",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-room-06-opens_at",
+      "subject": "room-06",
+      "predicate": "opens_at",
+      "value": "07:00",
+      "object": null
+    },
+    {
+      "id": "f-room-06-access",
+      "subject": "room-06",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-07-floor",
+      "subject": "room-07",
+      "predicate": "floor",
+      "value": "2",
+      "object": null
+    },
+    {
+      "id": "f-room-07-capacity",
+      "subject": "room-07",
+      "predicate": "capacity",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-room-07-owner",
+      "subject": "room-07",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-room-07-opens_at",
+      "subject": "room-07",
+      "predicate": "opens_at",
+      "value": "08:00",
+      "object": null
+    },
+    {
+      "id": "f-room-07-access",
+      "subject": "room-07",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-08-floor",
+      "subject": "room-08",
+      "predicate": "floor",
+      "value": "2",
+      "object": null
+    },
+    {
+      "id": "f-room-08-capacity",
+      "subject": "room-08",
+      "predicate": "capacity",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-room-08-owner",
+      "subject": "room-08",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-room-08-opens_at",
+      "subject": "room-08",
+      "predicate": "opens_at",
+      "value": "09:00",
+      "object": null
+    },
+    {
+      "id": "f-room-08-access",
+      "subject": "room-08",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-09-floor",
+      "subject": "room-09",
+      "predicate": "floor",
+      "value": "3",
+      "object": null
+    },
+    {
+      "id": "f-room-09-capacity",
+      "subject": "room-09",
+      "predicate": "capacity",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-room-09-owner",
+      "subject": "room-09",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-room-09-opens_at",
+      "subject": "room-09",
+      "predicate": "opens_at",
+      "value": "07:00",
+      "object": null
+    },
+    {
+      "id": "f-room-09-access",
+      "subject": "room-09",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-10-floor",
+      "subject": "room-10",
+      "predicate": "floor",
+      "value": "3",
+      "object": null
+    },
+    {
+      "id": "f-room-10-capacity",
+      "subject": "room-10",
+      "predicate": "capacity",
+      "value": "4",
+      "object": null
+    },
+    {
+      "id": "f-room-10-owner",
+      "subject": "room-10",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-room-10-opens_at",
+      "subject": "room-10",
+      "predicate": "opens_at",
+      "value": "08:00",
+      "object": null
+    },
+    {
+      "id": "f-room-10-access",
+      "subject": "room-10",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-11-floor",
+      "subject": "room-11",
+      "predicate": "floor",
+      "value": "3",
+      "object": null
+    },
+    {
+      "id": "f-room-11-capacity",
+      "subject": "room-11",
+      "predicate": "capacity",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-room-11-owner",
+      "subject": "room-11",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-room-11-opens_at",
+      "subject": "room-11",
+      "predicate": "opens_at",
+      "value": "09:00",
+      "object": null
+    },
+    {
+      "id": "f-room-11-access",
+      "subject": "room-11",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-room-12-floor",
+      "subject": "room-12",
+      "predicate": "floor",
+      "value": "3",
+      "object": null
+    },
+    {
+      "id": "f-room-12-capacity",
+      "subject": "room-12",
+      "predicate": "capacity",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-room-12-owner",
+      "subject": "room-12",
+      "predicate": "owner",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-room-12-opens_at",
+      "subject": "room-12",
+      "predicate": "opens_at",
+      "value": "07:00",
+      "object": null
+    },
+    {
+      "id": "f-room-12-access",
+      "subject": "room-12",
+      "predicate": "access",
+      "value": "Staff badge required",
+      "object": null
+    },
+    {
+      "id": "f-person-01-member_of",
+      "subject": "person-01",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-person-01-located_in",
+      "subject": "person-01",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-person-01-role",
+      "subject": "person-01",
+      "predicate": "role",
+      "value": "Station director",
+      "object": null
+    },
+    {
+      "id": "f-person-01-radio_channel",
+      "subject": "person-01",
+      "predicate": "radio_channel",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-person-01-shift",
+      "subject": "person-01",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-02-member_of",
+      "subject": "person-02",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-person-02-located_in",
+      "subject": "person-02",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-person-02-role",
+      "subject": "person-02",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-02-radio_channel",
+      "subject": "person-02",
+      "predicate": "radio_channel",
+      "value": "12",
+      "object": null
+    },
+    {
+      "id": "f-person-02-shift",
+      "subject": "person-02",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-03-member_of",
+      "subject": "person-03",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-person-03-located_in",
+      "subject": "person-03",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-person-03-role",
+      "subject": "person-03",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-03-radio_channel",
+      "subject": "person-03",
+      "predicate": "radio_channel",
+      "value": "13",
+      "object": null
+    },
+    {
+      "id": "f-person-03-shift",
+      "subject": "person-03",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-04-member_of",
+      "subject": "person-04",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-person-04-located_in",
+      "subject": "person-04",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-person-04-role",
+      "subject": "person-04",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-04-radio_channel",
+      "subject": "person-04",
+      "predicate": "radio_channel",
+      "value": "14",
+      "object": null
+    },
+    {
+      "id": "f-person-04-shift",
+      "subject": "person-04",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-05-member_of",
+      "subject": "person-05",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-person-05-located_in",
+      "subject": "person-05",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-person-05-role",
+      "subject": "person-05",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-05-radio_channel",
+      "subject": "person-05",
+      "predicate": "radio_channel",
+      "value": "15",
+      "object": null
+    },
+    {
+      "id": "f-person-05-shift",
+      "subject": "person-05",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-06-member_of",
+      "subject": "person-06",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-person-06-located_in",
+      "subject": "person-06",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-person-06-role",
+      "subject": "person-06",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-06-radio_channel",
+      "subject": "person-06",
+      "predicate": "radio_channel",
+      "value": "16",
+      "object": null
+    },
+    {
+      "id": "f-person-06-shift",
+      "subject": "person-06",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-07-member_of",
+      "subject": "person-07",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-person-07-located_in",
+      "subject": "person-07",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-person-07-role",
+      "subject": "person-07",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-07-radio_channel",
+      "subject": "person-07",
+      "predicate": "radio_channel",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-person-07-shift",
+      "subject": "person-07",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-08-member_of",
+      "subject": "person-08",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-person-08-located_in",
+      "subject": "person-08",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-person-08-role",
+      "subject": "person-08",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-08-radio_channel",
+      "subject": "person-08",
+      "predicate": "radio_channel",
+      "value": "12",
+      "object": null
+    },
+    {
+      "id": "f-person-08-shift",
+      "subject": "person-08",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-09-member_of",
+      "subject": "person-09",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-person-09-located_in",
+      "subject": "person-09",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-person-09-role",
+      "subject": "person-09",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-09-radio_channel",
+      "subject": "person-09",
+      "predicate": "radio_channel",
+      "value": "13",
+      "object": null
+    },
+    {
+      "id": "f-person-09-shift",
+      "subject": "person-09",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-10-member_of",
+      "subject": "person-10",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-person-10-located_in",
+      "subject": "person-10",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-person-10-role",
+      "subject": "person-10",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-10-radio_channel",
+      "subject": "person-10",
+      "predicate": "radio_channel",
+      "value": "14",
+      "object": null
+    },
+    {
+      "id": "f-person-10-shift",
+      "subject": "person-10",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-11-member_of",
+      "subject": "person-11",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-person-11-located_in",
+      "subject": "person-11",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-person-11-role",
+      "subject": "person-11",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-11-radio_channel",
+      "subject": "person-11",
+      "predicate": "radio_channel",
+      "value": "15",
+      "object": null
+    },
+    {
+      "id": "f-person-11-shift",
+      "subject": "person-11",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-12-member_of",
+      "subject": "person-12",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-person-12-located_in",
+      "subject": "person-12",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-person-12-role",
+      "subject": "person-12",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-12-radio_channel",
+      "subject": "person-12",
+      "predicate": "radio_channel",
+      "value": "16",
+      "object": null
+    },
+    {
+      "id": "f-person-12-shift",
+      "subject": "person-12",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-13-member_of",
+      "subject": "person-13",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-person-13-located_in",
+      "subject": "person-13",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-person-13-role",
+      "subject": "person-13",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-13-radio_channel",
+      "subject": "person-13",
+      "predicate": "radio_channel",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-person-13-shift",
+      "subject": "person-13",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-14-member_of",
+      "subject": "person-14",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-person-14-located_in",
+      "subject": "person-14",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-person-14-role",
+      "subject": "person-14",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-14-radio_channel",
+      "subject": "person-14",
+      "predicate": "radio_channel",
+      "value": "12",
+      "object": null
+    },
+    {
+      "id": "f-person-14-shift",
+      "subject": "person-14",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-15-member_of",
+      "subject": "person-15",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-person-15-located_in",
+      "subject": "person-15",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-person-15-role",
+      "subject": "person-15",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-15-radio_channel",
+      "subject": "person-15",
+      "predicate": "radio_channel",
+      "value": "13",
+      "object": null
+    },
+    {
+      "id": "f-person-15-shift",
+      "subject": "person-15",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-16-member_of",
+      "subject": "person-16",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-person-16-located_in",
+      "subject": "person-16",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-person-16-role",
+      "subject": "person-16",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-16-radio_channel",
+      "subject": "person-16",
+      "predicate": "radio_channel",
+      "value": "14",
+      "object": null
+    },
+    {
+      "id": "f-person-16-shift",
+      "subject": "person-16",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-17-member_of",
+      "subject": "person-17",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-person-17-located_in",
+      "subject": "person-17",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-person-17-role",
+      "subject": "person-17",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-17-radio_channel",
+      "subject": "person-17",
+      "predicate": "radio_channel",
+      "value": "15",
+      "object": null
+    },
+    {
+      "id": "f-person-17-shift",
+      "subject": "person-17",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-18-member_of",
+      "subject": "person-18",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-person-18-located_in",
+      "subject": "person-18",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-person-18-role",
+      "subject": "person-18",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-18-radio_channel",
+      "subject": "person-18",
+      "predicate": "radio_channel",
+      "value": "16",
+      "object": null
+    },
+    {
+      "id": "f-person-18-shift",
+      "subject": "person-18",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-19-member_of",
+      "subject": "person-19",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-01"
+    },
+    {
+      "id": "f-person-19-located_in",
+      "subject": "person-19",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-person-19-role",
+      "subject": "person-19",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-19-radio_channel",
+      "subject": "person-19",
+      "predicate": "radio_channel",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-person-19-shift",
+      "subject": "person-19",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-20-member_of",
+      "subject": "person-20",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-02"
+    },
+    {
+      "id": "f-person-20-located_in",
+      "subject": "person-20",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-person-20-role",
+      "subject": "person-20",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-20-radio_channel",
+      "subject": "person-20",
+      "predicate": "radio_channel",
+      "value": "12",
+      "object": null
+    },
+    {
+      "id": "f-person-20-shift",
+      "subject": "person-20",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-21-member_of",
+      "subject": "person-21",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-03"
+    },
+    {
+      "id": "f-person-21-located_in",
+      "subject": "person-21",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-person-21-role",
+      "subject": "person-21",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-21-radio_channel",
+      "subject": "person-21",
+      "predicate": "radio_channel",
+      "value": "13",
+      "object": null
+    },
+    {
+      "id": "f-person-21-shift",
+      "subject": "person-21",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-22-member_of",
+      "subject": "person-22",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-04"
+    },
+    {
+      "id": "f-person-22-located_in",
+      "subject": "person-22",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-person-22-role",
+      "subject": "person-22",
+      "predicate": "role",
+      "value": "Researcher",
+      "object": null
+    },
+    {
+      "id": "f-person-22-radio_channel",
+      "subject": "person-22",
+      "predicate": "radio_channel",
+      "value": "14",
+      "object": null
+    },
+    {
+      "id": "f-person-22-shift",
+      "subject": "person-22",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-person-23-member_of",
+      "subject": "person-23",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-05"
+    },
+    {
+      "id": "f-person-23-located_in",
+      "subject": "person-23",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-person-23-role",
+      "subject": "person-23",
+      "predicate": "role",
+      "value": "Technician",
+      "object": null
+    },
+    {
+      "id": "f-person-23-radio_channel",
+      "subject": "person-23",
+      "predicate": "radio_channel",
+      "value": "15",
+      "object": null
+    },
+    {
+      "id": "f-person-23-shift",
+      "subject": "person-23",
+      "predicate": "shift",
+      "value": "08:00\u201316:00",
+      "object": null
+    },
+    {
+      "id": "f-person-24-member_of",
+      "subject": "person-24",
+      "predicate": "member_of",
+      "value": null,
+      "object": "team-06"
+    },
+    {
+      "id": "f-person-24-located_in",
+      "subject": "person-24",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-person-24-role",
+      "subject": "person-24",
+      "predicate": "role",
+      "value": "Coordinator",
+      "object": null
+    },
+    {
+      "id": "f-person-24-radio_channel",
+      "subject": "person-24",
+      "predicate": "radio_channel",
+      "value": "16",
+      "object": null
+    },
+    {
+      "id": "f-person-24-shift",
+      "subject": "person-24",
+      "predicate": "shift",
+      "value": "12:00\u201320:00",
+      "object": null
+    },
+    {
+      "id": "f-device-01-located_in",
+      "subject": "device-01",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-device-01-owner",
+      "subject": "device-01",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-01"
+    },
+    {
+      "id": "f-device-01-status",
+      "subject": "device-01",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-01-serial_number",
+      "subject": "device-01",
+      "predicate": "serial_number",
+      "value": "AST-4101",
+      "object": null
+    },
+    {
+      "id": "f-device-01-inspection_day",
+      "subject": "device-01",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-02-located_in",
+      "subject": "device-02",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-device-02-owner",
+      "subject": "device-02",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-02"
+    },
+    {
+      "id": "f-device-02-status",
+      "subject": "device-02",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-02-serial_number",
+      "subject": "device-02",
+      "predicate": "serial_number",
+      "value": "AST-4102",
+      "object": null
+    },
+    {
+      "id": "f-device-02-inspection_day",
+      "subject": "device-02",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-03-located_in",
+      "subject": "device-03",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-device-03-owner",
+      "subject": "device-03",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-03"
+    },
+    {
+      "id": "f-device-03-status",
+      "subject": "device-03",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-03-serial_number",
+      "subject": "device-03",
+      "predicate": "serial_number",
+      "value": "AST-4103",
+      "object": null
+    },
+    {
+      "id": "f-device-03-inspection_day",
+      "subject": "device-03",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-04-located_in",
+      "subject": "device-04",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-device-04-owner",
+      "subject": "device-04",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-04"
+    },
+    {
+      "id": "f-device-04-status",
+      "subject": "device-04",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-04-serial_number",
+      "subject": "device-04",
+      "predicate": "serial_number",
+      "value": "AST-4104",
+      "object": null
+    },
+    {
+      "id": "f-device-04-inspection_day",
+      "subject": "device-04",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-05-located_in",
+      "subject": "device-05",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-device-05-owner",
+      "subject": "device-05",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-05"
+    },
+    {
+      "id": "f-device-05-status",
+      "subject": "device-05",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-05-serial_number",
+      "subject": "device-05",
+      "predicate": "serial_number",
+      "value": "AST-4105",
+      "object": null
+    },
+    {
+      "id": "f-device-05-inspection_day",
+      "subject": "device-05",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-06-located_in",
+      "subject": "device-06",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-device-06-owner",
+      "subject": "device-06",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-06"
+    },
+    {
+      "id": "f-device-06-status",
+      "subject": "device-06",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-06-serial_number",
+      "subject": "device-06",
+      "predicate": "serial_number",
+      "value": "AST-4106",
+      "object": null
+    },
+    {
+      "id": "f-device-06-inspection_day",
+      "subject": "device-06",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-07-located_in",
+      "subject": "device-07",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-device-07-owner",
+      "subject": "device-07",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-07"
+    },
+    {
+      "id": "f-device-07-status",
+      "subject": "device-07",
+      "predicate": "status",
+      "value": "Maintenance scheduled",
+      "object": null
+    },
+    {
+      "id": "f-device-07-serial_number",
+      "subject": "device-07",
+      "predicate": "serial_number",
+      "value": "AST-4107",
+      "object": null
+    },
+    {
+      "id": "f-device-07-inspection_day",
+      "subject": "device-07",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-08-located_in",
+      "subject": "device-08",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-device-08-owner",
+      "subject": "device-08",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-08"
+    },
+    {
+      "id": "f-device-08-status",
+      "subject": "device-08",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-08-serial_number",
+      "subject": "device-08",
+      "predicate": "serial_number",
+      "value": "AST-4108",
+      "object": null
+    },
+    {
+      "id": "f-device-08-inspection_day",
+      "subject": "device-08",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-09-located_in",
+      "subject": "device-09",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-device-09-owner",
+      "subject": "device-09",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-09"
+    },
+    {
+      "id": "f-device-09-status",
+      "subject": "device-09",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-09-serial_number",
+      "subject": "device-09",
+      "predicate": "serial_number",
+      "value": "AST-4109",
+      "object": null
+    },
+    {
+      "id": "f-device-09-inspection_day",
+      "subject": "device-09",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-10-located_in",
+      "subject": "device-10",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-device-10-owner",
+      "subject": "device-10",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-10"
+    },
+    {
+      "id": "f-device-10-status",
+      "subject": "device-10",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-10-serial_number",
+      "subject": "device-10",
+      "predicate": "serial_number",
+      "value": "AST-4110",
+      "object": null
+    },
+    {
+      "id": "f-device-10-inspection_day",
+      "subject": "device-10",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-11-located_in",
+      "subject": "device-11",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-device-11-owner",
+      "subject": "device-11",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-11"
+    },
+    {
+      "id": "f-device-11-status",
+      "subject": "device-11",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-11-serial_number",
+      "subject": "device-11",
+      "predicate": "serial_number",
+      "value": "AST-4111",
+      "object": null
+    },
+    {
+      "id": "f-device-11-inspection_day",
+      "subject": "device-11",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-12-located_in",
+      "subject": "device-12",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-device-12-owner",
+      "subject": "device-12",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-12"
+    },
+    {
+      "id": "f-device-12-status",
+      "subject": "device-12",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-12-serial_number",
+      "subject": "device-12",
+      "predicate": "serial_number",
+      "value": "AST-4112",
+      "object": null
+    },
+    {
+      "id": "f-device-12-inspection_day",
+      "subject": "device-12",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-13-located_in",
+      "subject": "device-13",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-device-13-owner",
+      "subject": "device-13",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-13"
+    },
+    {
+      "id": "f-device-13-status",
+      "subject": "device-13",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-13-serial_number",
+      "subject": "device-13",
+      "predicate": "serial_number",
+      "value": "AST-4113",
+      "object": null
+    },
+    {
+      "id": "f-device-13-inspection_day",
+      "subject": "device-13",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-14-located_in",
+      "subject": "device-14",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-device-14-owner",
+      "subject": "device-14",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-14"
+    },
+    {
+      "id": "f-device-14-status",
+      "subject": "device-14",
+      "predicate": "status",
+      "value": "Maintenance scheduled",
+      "object": null
+    },
+    {
+      "id": "f-device-14-serial_number",
+      "subject": "device-14",
+      "predicate": "serial_number",
+      "value": "AST-4114",
+      "object": null
+    },
+    {
+      "id": "f-device-14-inspection_day",
+      "subject": "device-14",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-15-located_in",
+      "subject": "device-15",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-device-15-owner",
+      "subject": "device-15",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-15"
+    },
+    {
+      "id": "f-device-15-status",
+      "subject": "device-15",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-15-serial_number",
+      "subject": "device-15",
+      "predicate": "serial_number",
+      "value": "AST-4115",
+      "object": null
+    },
+    {
+      "id": "f-device-15-inspection_day",
+      "subject": "device-15",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-16-located_in",
+      "subject": "device-16",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-device-16-owner",
+      "subject": "device-16",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-16"
+    },
+    {
+      "id": "f-device-16-status",
+      "subject": "device-16",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-16-serial_number",
+      "subject": "device-16",
+      "predicate": "serial_number",
+      "value": "AST-4116",
+      "object": null
+    },
+    {
+      "id": "f-device-16-inspection_day",
+      "subject": "device-16",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-17-located_in",
+      "subject": "device-17",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-device-17-owner",
+      "subject": "device-17",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-17"
+    },
+    {
+      "id": "f-device-17-status",
+      "subject": "device-17",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-17-serial_number",
+      "subject": "device-17",
+      "predicate": "serial_number",
+      "value": "AST-4117",
+      "object": null
+    },
+    {
+      "id": "f-device-17-inspection_day",
+      "subject": "device-17",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-18-located_in",
+      "subject": "device-18",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-device-18-owner",
+      "subject": "device-18",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-18"
+    },
+    {
+      "id": "f-device-18-status",
+      "subject": "device-18",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-18-serial_number",
+      "subject": "device-18",
+      "predicate": "serial_number",
+      "value": "AST-4118",
+      "object": null
+    },
+    {
+      "id": "f-device-18-inspection_day",
+      "subject": "device-18",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-19-located_in",
+      "subject": "device-19",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-device-19-owner",
+      "subject": "device-19",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-19"
+    },
+    {
+      "id": "f-device-19-status",
+      "subject": "device-19",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-19-serial_number",
+      "subject": "device-19",
+      "predicate": "serial_number",
+      "value": "AST-4119",
+      "object": null
+    },
+    {
+      "id": "f-device-19-inspection_day",
+      "subject": "device-19",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-20-located_in",
+      "subject": "device-20",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-device-20-owner",
+      "subject": "device-20",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-20"
+    },
+    {
+      "id": "f-device-20-status",
+      "subject": "device-20",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-20-serial_number",
+      "subject": "device-20",
+      "predicate": "serial_number",
+      "value": "AST-4120",
+      "object": null
+    },
+    {
+      "id": "f-device-20-inspection_day",
+      "subject": "device-20",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-21-located_in",
+      "subject": "device-21",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-device-21-owner",
+      "subject": "device-21",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-21"
+    },
+    {
+      "id": "f-device-21-status",
+      "subject": "device-21",
+      "predicate": "status",
+      "value": "Maintenance scheduled",
+      "object": null
+    },
+    {
+      "id": "f-device-21-serial_number",
+      "subject": "device-21",
+      "predicate": "serial_number",
+      "value": "AST-4121",
+      "object": null
+    },
+    {
+      "id": "f-device-21-inspection_day",
+      "subject": "device-21",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-22-located_in",
+      "subject": "device-22",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-device-22-owner",
+      "subject": "device-22",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-22"
+    },
+    {
+      "id": "f-device-22-status",
+      "subject": "device-22",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-22-serial_number",
+      "subject": "device-22",
+      "predicate": "serial_number",
+      "value": "AST-4122",
+      "object": null
+    },
+    {
+      "id": "f-device-22-inspection_day",
+      "subject": "device-22",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-23-located_in",
+      "subject": "device-23",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-device-23-owner",
+      "subject": "device-23",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-23"
+    },
+    {
+      "id": "f-device-23-status",
+      "subject": "device-23",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-23-serial_number",
+      "subject": "device-23",
+      "predicate": "serial_number",
+      "value": "AST-4123",
+      "object": null
+    },
+    {
+      "id": "f-device-23-inspection_day",
+      "subject": "device-23",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-24-located_in",
+      "subject": "device-24",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-device-24-owner",
+      "subject": "device-24",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-24"
+    },
+    {
+      "id": "f-device-24-status",
+      "subject": "device-24",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-24-serial_number",
+      "subject": "device-24",
+      "predicate": "serial_number",
+      "value": "AST-4124",
+      "object": null
+    },
+    {
+      "id": "f-device-24-inspection_day",
+      "subject": "device-24",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-25-located_in",
+      "subject": "device-25",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-device-25-owner",
+      "subject": "device-25",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-01"
+    },
+    {
+      "id": "f-device-25-status",
+      "subject": "device-25",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-25-serial_number",
+      "subject": "device-25",
+      "predicate": "serial_number",
+      "value": "AST-4125",
+      "object": null
+    },
+    {
+      "id": "f-device-25-inspection_day",
+      "subject": "device-25",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-26-located_in",
+      "subject": "device-26",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-device-26-owner",
+      "subject": "device-26",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-02"
+    },
+    {
+      "id": "f-device-26-status",
+      "subject": "device-26",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-26-serial_number",
+      "subject": "device-26",
+      "predicate": "serial_number",
+      "value": "AST-4126",
+      "object": null
+    },
+    {
+      "id": "f-device-26-inspection_day",
+      "subject": "device-26",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-27-located_in",
+      "subject": "device-27",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-device-27-owner",
+      "subject": "device-27",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-03"
+    },
+    {
+      "id": "f-device-27-status",
+      "subject": "device-27",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-27-serial_number",
+      "subject": "device-27",
+      "predicate": "serial_number",
+      "value": "AST-4127",
+      "object": null
+    },
+    {
+      "id": "f-device-27-inspection_day",
+      "subject": "device-27",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-28-located_in",
+      "subject": "device-28",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-device-28-owner",
+      "subject": "device-28",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-04"
+    },
+    {
+      "id": "f-device-28-status",
+      "subject": "device-28",
+      "predicate": "status",
+      "value": "Maintenance scheduled",
+      "object": null
+    },
+    {
+      "id": "f-device-28-serial_number",
+      "subject": "device-28",
+      "predicate": "serial_number",
+      "value": "AST-4128",
+      "object": null
+    },
+    {
+      "id": "f-device-28-inspection_day",
+      "subject": "device-28",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-device-29-located_in",
+      "subject": "device-29",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-device-29-owner",
+      "subject": "device-29",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-05"
+    },
+    {
+      "id": "f-device-29-status",
+      "subject": "device-29",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-29-serial_number",
+      "subject": "device-29",
+      "predicate": "serial_number",
+      "value": "AST-4129",
+      "object": null
+    },
+    {
+      "id": "f-device-29-inspection_day",
+      "subject": "device-29",
+      "predicate": "inspection_day",
+      "value": "Friday",
+      "object": null
+    },
+    {
+      "id": "f-device-30-located_in",
+      "subject": "device-30",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-device-30-owner",
+      "subject": "device-30",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-06"
+    },
+    {
+      "id": "f-device-30-status",
+      "subject": "device-30",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-30-serial_number",
+      "subject": "device-30",
+      "predicate": "serial_number",
+      "value": "AST-4130",
+      "object": null
+    },
+    {
+      "id": "f-device-30-inspection_day",
+      "subject": "device-30",
+      "predicate": "inspection_day",
+      "value": "Monday",
+      "object": null
+    },
+    {
+      "id": "f-device-31-located_in",
+      "subject": "device-31",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-device-31-owner",
+      "subject": "device-31",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-07"
+    },
+    {
+      "id": "f-device-31-status",
+      "subject": "device-31",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-31-serial_number",
+      "subject": "device-31",
+      "predicate": "serial_number",
+      "value": "AST-4131",
+      "object": null
+    },
+    {
+      "id": "f-device-31-inspection_day",
+      "subject": "device-31",
+      "predicate": "inspection_day",
+      "value": "Tuesday",
+      "object": null
+    },
+    {
+      "id": "f-device-32-located_in",
+      "subject": "device-32",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-device-32-owner",
+      "subject": "device-32",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-08"
+    },
+    {
+      "id": "f-device-32-status",
+      "subject": "device-32",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-32-serial_number",
+      "subject": "device-32",
+      "predicate": "serial_number",
+      "value": "AST-4132",
+      "object": null
+    },
+    {
+      "id": "f-device-32-inspection_day",
+      "subject": "device-32",
+      "predicate": "inspection_day",
+      "value": "Wednesday",
+      "object": null
+    },
+    {
+      "id": "f-device-33-located_in",
+      "subject": "device-33",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-device-33-owner",
+      "subject": "device-33",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-09"
+    },
+    {
+      "id": "f-device-33-status",
+      "subject": "device-33",
+      "predicate": "status",
+      "value": "Operational",
+      "object": null
+    },
+    {
+      "id": "f-device-33-serial_number",
+      "subject": "device-33",
+      "predicate": "serial_number",
+      "value": "AST-4133",
+      "object": null
+    },
+    {
+      "id": "f-device-33-inspection_day",
+      "subject": "device-33",
+      "predicate": "inspection_day",
+      "value": "Thursday",
+      "object": null
+    },
+    {
+      "id": "f-supply-01-located_in",
+      "subject": "supply-01",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-supply-01-quantity",
+      "subject": "supply-01",
+      "predicate": "quantity",
+      "value": "17",
+      "object": null
+    },
+    {
+      "id": "f-supply-01-reorder_threshold",
+      "subject": "supply-01",
+      "predicate": "reorder_threshold",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-supply-01-owner",
+      "subject": "supply-01",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-01"
+    },
+    {
+      "id": "f-supply-01-unit",
+      "subject": "supply-01",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-02-located_in",
+      "subject": "supply-02",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-supply-02-quantity",
+      "subject": "supply-02",
+      "predicate": "quantity",
+      "value": "24",
+      "object": null
+    },
+    {
+      "id": "f-supply-02-reorder_threshold",
+      "subject": "supply-02",
+      "predicate": "reorder_threshold",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-supply-02-owner",
+      "subject": "supply-02",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-02"
+    },
+    {
+      "id": "f-supply-02-unit",
+      "subject": "supply-02",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-03-located_in",
+      "subject": "supply-03",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-supply-03-quantity",
+      "subject": "supply-03",
+      "predicate": "quantity",
+      "value": "31",
+      "object": null
+    },
+    {
+      "id": "f-supply-03-reorder_threshold",
+      "subject": "supply-03",
+      "predicate": "reorder_threshold",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-supply-03-owner",
+      "subject": "supply-03",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-03"
+    },
+    {
+      "id": "f-supply-03-unit",
+      "subject": "supply-03",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-04-located_in",
+      "subject": "supply-04",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-supply-04-quantity",
+      "subject": "supply-04",
+      "predicate": "quantity",
+      "value": "38",
+      "object": null
+    },
+    {
+      "id": "f-supply-04-reorder_threshold",
+      "subject": "supply-04",
+      "predicate": "reorder_threshold",
+      "value": "9",
+      "object": null
+    },
+    {
+      "id": "f-supply-04-owner",
+      "subject": "supply-04",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-04"
+    },
+    {
+      "id": "f-supply-04-unit",
+      "subject": "supply-04",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-05-located_in",
+      "subject": "supply-05",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-supply-05-quantity",
+      "subject": "supply-05",
+      "predicate": "quantity",
+      "value": "45",
+      "object": null
+    },
+    {
+      "id": "f-supply-05-reorder_threshold",
+      "subject": "supply-05",
+      "predicate": "reorder_threshold",
+      "value": "10",
+      "object": null
+    },
+    {
+      "id": "f-supply-05-owner",
+      "subject": "supply-05",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-05"
+    },
+    {
+      "id": "f-supply-05-unit",
+      "subject": "supply-05",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-06-located_in",
+      "subject": "supply-06",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-supply-06-quantity",
+      "subject": "supply-06",
+      "predicate": "quantity",
+      "value": "52",
+      "object": null
+    },
+    {
+      "id": "f-supply-06-reorder_threshold",
+      "subject": "supply-06",
+      "predicate": "reorder_threshold",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-supply-06-owner",
+      "subject": "supply-06",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-06"
+    },
+    {
+      "id": "f-supply-06-unit",
+      "subject": "supply-06",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-07-located_in",
+      "subject": "supply-07",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-supply-07-quantity",
+      "subject": "supply-07",
+      "predicate": "quantity",
+      "value": "59",
+      "object": null
+    },
+    {
+      "id": "f-supply-07-reorder_threshold",
+      "subject": "supply-07",
+      "predicate": "reorder_threshold",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-supply-07-owner",
+      "subject": "supply-07",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-07"
+    },
+    {
+      "id": "f-supply-07-unit",
+      "subject": "supply-07",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-08-located_in",
+      "subject": "supply-08",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-supply-08-quantity",
+      "subject": "supply-08",
+      "predicate": "quantity",
+      "value": "66",
+      "object": null
+    },
+    {
+      "id": "f-supply-08-reorder_threshold",
+      "subject": "supply-08",
+      "predicate": "reorder_threshold",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-supply-08-owner",
+      "subject": "supply-08",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-08"
+    },
+    {
+      "id": "f-supply-08-unit",
+      "subject": "supply-08",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-09-located_in",
+      "subject": "supply-09",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-supply-09-quantity",
+      "subject": "supply-09",
+      "predicate": "quantity",
+      "value": "73",
+      "object": null
+    },
+    {
+      "id": "f-supply-09-reorder_threshold",
+      "subject": "supply-09",
+      "predicate": "reorder_threshold",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-supply-09-owner",
+      "subject": "supply-09",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-09"
+    },
+    {
+      "id": "f-supply-09-unit",
+      "subject": "supply-09",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-10-located_in",
+      "subject": "supply-10",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-supply-10-quantity",
+      "subject": "supply-10",
+      "predicate": "quantity",
+      "value": "80",
+      "object": null
+    },
+    {
+      "id": "f-supply-10-reorder_threshold",
+      "subject": "supply-10",
+      "predicate": "reorder_threshold",
+      "value": "9",
+      "object": null
+    },
+    {
+      "id": "f-supply-10-owner",
+      "subject": "supply-10",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-10"
+    },
+    {
+      "id": "f-supply-10-unit",
+      "subject": "supply-10",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-11-located_in",
+      "subject": "supply-11",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-supply-11-quantity",
+      "subject": "supply-11",
+      "predicate": "quantity",
+      "value": "87",
+      "object": null
+    },
+    {
+      "id": "f-supply-11-reorder_threshold",
+      "subject": "supply-11",
+      "predicate": "reorder_threshold",
+      "value": "10",
+      "object": null
+    },
+    {
+      "id": "f-supply-11-owner",
+      "subject": "supply-11",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-11"
+    },
+    {
+      "id": "f-supply-11-unit",
+      "subject": "supply-11",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-12-located_in",
+      "subject": "supply-12",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-supply-12-quantity",
+      "subject": "supply-12",
+      "predicate": "quantity",
+      "value": "94",
+      "object": null
+    },
+    {
+      "id": "f-supply-12-reorder_threshold",
+      "subject": "supply-12",
+      "predicate": "reorder_threshold",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-supply-12-owner",
+      "subject": "supply-12",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-12"
+    },
+    {
+      "id": "f-supply-12-unit",
+      "subject": "supply-12",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-13-located_in",
+      "subject": "supply-13",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-01"
+    },
+    {
+      "id": "f-supply-13-quantity",
+      "subject": "supply-13",
+      "predicate": "quantity",
+      "value": "11",
+      "object": null
+    },
+    {
+      "id": "f-supply-13-reorder_threshold",
+      "subject": "supply-13",
+      "predicate": "reorder_threshold",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-supply-13-owner",
+      "subject": "supply-13",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-13"
+    },
+    {
+      "id": "f-supply-13-unit",
+      "subject": "supply-13",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-14-located_in",
+      "subject": "supply-14",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-02"
+    },
+    {
+      "id": "f-supply-14-quantity",
+      "subject": "supply-14",
+      "predicate": "quantity",
+      "value": "18",
+      "object": null
+    },
+    {
+      "id": "f-supply-14-reorder_threshold",
+      "subject": "supply-14",
+      "predicate": "reorder_threshold",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-supply-14-owner",
+      "subject": "supply-14",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-14"
+    },
+    {
+      "id": "f-supply-14-unit",
+      "subject": "supply-14",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-15-located_in",
+      "subject": "supply-15",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-03"
+    },
+    {
+      "id": "f-supply-15-quantity",
+      "subject": "supply-15",
+      "predicate": "quantity",
+      "value": "25",
+      "object": null
+    },
+    {
+      "id": "f-supply-15-reorder_threshold",
+      "subject": "supply-15",
+      "predicate": "reorder_threshold",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-supply-15-owner",
+      "subject": "supply-15",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-15"
+    },
+    {
+      "id": "f-supply-15-unit",
+      "subject": "supply-15",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-16-located_in",
+      "subject": "supply-16",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-04"
+    },
+    {
+      "id": "f-supply-16-quantity",
+      "subject": "supply-16",
+      "predicate": "quantity",
+      "value": "32",
+      "object": null
+    },
+    {
+      "id": "f-supply-16-reorder_threshold",
+      "subject": "supply-16",
+      "predicate": "reorder_threshold",
+      "value": "9",
+      "object": null
+    },
+    {
+      "id": "f-supply-16-owner",
+      "subject": "supply-16",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-16"
+    },
+    {
+      "id": "f-supply-16-unit",
+      "subject": "supply-16",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-17-located_in",
+      "subject": "supply-17",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-05"
+    },
+    {
+      "id": "f-supply-17-quantity",
+      "subject": "supply-17",
+      "predicate": "quantity",
+      "value": "39",
+      "object": null
+    },
+    {
+      "id": "f-supply-17-reorder_threshold",
+      "subject": "supply-17",
+      "predicate": "reorder_threshold",
+      "value": "10",
+      "object": null
+    },
+    {
+      "id": "f-supply-17-owner",
+      "subject": "supply-17",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-17"
+    },
+    {
+      "id": "f-supply-17-unit",
+      "subject": "supply-17",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-18-located_in",
+      "subject": "supply-18",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-06"
+    },
+    {
+      "id": "f-supply-18-quantity",
+      "subject": "supply-18",
+      "predicate": "quantity",
+      "value": "46",
+      "object": null
+    },
+    {
+      "id": "f-supply-18-reorder_threshold",
+      "subject": "supply-18",
+      "predicate": "reorder_threshold",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-supply-18-owner",
+      "subject": "supply-18",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-18"
+    },
+    {
+      "id": "f-supply-18-unit",
+      "subject": "supply-18",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-19-located_in",
+      "subject": "supply-19",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-07"
+    },
+    {
+      "id": "f-supply-19-quantity",
+      "subject": "supply-19",
+      "predicate": "quantity",
+      "value": "53",
+      "object": null
+    },
+    {
+      "id": "f-supply-19-reorder_threshold",
+      "subject": "supply-19",
+      "predicate": "reorder_threshold",
+      "value": "6",
+      "object": null
+    },
+    {
+      "id": "f-supply-19-owner",
+      "subject": "supply-19",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-19"
+    },
+    {
+      "id": "f-supply-19-unit",
+      "subject": "supply-19",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-20-located_in",
+      "subject": "supply-20",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-08"
+    },
+    {
+      "id": "f-supply-20-quantity",
+      "subject": "supply-20",
+      "predicate": "quantity",
+      "value": "60",
+      "object": null
+    },
+    {
+      "id": "f-supply-20-reorder_threshold",
+      "subject": "supply-20",
+      "predicate": "reorder_threshold",
+      "value": "7",
+      "object": null
+    },
+    {
+      "id": "f-supply-20-owner",
+      "subject": "supply-20",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-20"
+    },
+    {
+      "id": "f-supply-20-unit",
+      "subject": "supply-20",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-21-located_in",
+      "subject": "supply-21",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-09"
+    },
+    {
+      "id": "f-supply-21-quantity",
+      "subject": "supply-21",
+      "predicate": "quantity",
+      "value": "67",
+      "object": null
+    },
+    {
+      "id": "f-supply-21-reorder_threshold",
+      "subject": "supply-21",
+      "predicate": "reorder_threshold",
+      "value": "8",
+      "object": null
+    },
+    {
+      "id": "f-supply-21-owner",
+      "subject": "supply-21",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-21"
+    },
+    {
+      "id": "f-supply-21-unit",
+      "subject": "supply-21",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-22-located_in",
+      "subject": "supply-22",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-10"
+    },
+    {
+      "id": "f-supply-22-quantity",
+      "subject": "supply-22",
+      "predicate": "quantity",
+      "value": "74",
+      "object": null
+    },
+    {
+      "id": "f-supply-22-reorder_threshold",
+      "subject": "supply-22",
+      "predicate": "reorder_threshold",
+      "value": "9",
+      "object": null
+    },
+    {
+      "id": "f-supply-22-owner",
+      "subject": "supply-22",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-22"
+    },
+    {
+      "id": "f-supply-22-unit",
+      "subject": "supply-22",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-23-located_in",
+      "subject": "supply-23",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-11"
+    },
+    {
+      "id": "f-supply-23-quantity",
+      "subject": "supply-23",
+      "predicate": "quantity",
+      "value": "81",
+      "object": null
+    },
+    {
+      "id": "f-supply-23-reorder_threshold",
+      "subject": "supply-23",
+      "predicate": "reorder_threshold",
+      "value": "10",
+      "object": null
+    },
+    {
+      "id": "f-supply-23-owner",
+      "subject": "supply-23",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-23"
+    },
+    {
+      "id": "f-supply-23-unit",
+      "subject": "supply-23",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    },
+    {
+      "id": "f-supply-24-located_in",
+      "subject": "supply-24",
+      "predicate": "located_in",
+      "value": null,
+      "object": "room-12"
+    },
+    {
+      "id": "f-supply-24-quantity",
+      "subject": "supply-24",
+      "predicate": "quantity",
+      "value": "88",
+      "object": null
+    },
+    {
+      "id": "f-supply-24-reorder_threshold",
+      "subject": "supply-24",
+      "predicate": "reorder_threshold",
+      "value": "5",
+      "object": null
+    },
+    {
+      "id": "f-supply-24-owner",
+      "subject": "supply-24",
+      "predicate": "owner",
+      "value": null,
+      "object": "person-24"
+    },
+    {
+      "id": "f-supply-24-unit",
+      "subject": "supply-24",
+      "predicate": "unit",
+      "value": "packs",
+      "object": null
+    }
+  ]
+}

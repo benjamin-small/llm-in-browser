@@ -1,0 +1,34 @@
+{
+  "name": "local-station-chat",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "python3 scripts/dev.py",
+    "start": "python3 scripts/dev.py",
+    "setup:assets": "python3 scripts/bootstrap_runtime.py",
+    "proof:reference-build": "python3 scripts/build_reference.py",
+    "proof": "python3 scripts/prove_runtime.py",
+    "proof:serve": "python3 scripts/serve_proof.py",
+    "proof:browser": "node scripts/run_browser_proof.mjs",
+    "proof:build": "python3 scripts/build_runtime.py",
+    "build": "python3 scripts/build_app.py",
+    "check": "tsc --noEmit",
+    "data:generate": "python3 scripts/generate_data.py && cargo build --manifest-path crates/station-core/Cargo.toml --locked --offline && python3 scripts/ground_training.py",
+    "test:rust": "cargo test --manifest-path crates/station-core/Cargo.toml --locked --offline",
+    "train": ".venv/bin/python scripts/train.py",
+    "test": "node --test tests/*.test.ts && python3 scripts/test_data.py && npm run test:rust",
+    "setup:training": "python3 -m venv .venv && .venv/bin/python -m pip install -r training/requirements.lock.txt && python3 scripts/download_training_model.py",
+    "export": ".venv/bin/python scripts/export_model.py",
+    "evaluate": "python3 scripts/evaluate.py",
+    "pages:pack": "python3 scripts/pages_release.py pack",
+    "pages:install": "python3 scripts/pages_release.py install",
+    "build:pages": "python3 scripts/build_app.py --pages --base /llm-in-browser/",
+    "preview": "vite preview --host 127.0.0.1 --port 8795 --base /llm-in-browser/"
+  },
+  "devDependencies": {
+    "@types/node": "26.5.0",
+    "playwright": "1.63.0",
+    "typescript": "7.0.2",
+    "vite": "8.2.2"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "default": "tuned-q4",
+  "models": [
+    {
+      "id": "base-q8",
+      "name": "Base SmolLM2 \u00b7 Q8_0",
+      "manifest": "/models/base-q8/manifest.json"
+    },
+    {
+      "id": "tuned-q8",
+      "name": "Tuned SmolLM2 \u00b7 Q8_0",
+      "manifest": "/models/tuned-q8/manifest.json"
+    },
+    {
+      "id": "tuned-q4",
+      "name": "Tuned SmolLM2 \u00b7 Q4_0",
+      "manifest": "/models/tuned-q4/manifest.json"
+    }
+  ]
+}

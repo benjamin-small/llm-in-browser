@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "base-q8",
+  "name": "Base SmolLM2 \u00b7 Q8_0",
+  "model": "HuggingFaceTB/SmolLM2-360M-Instruct",
+  "revision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+  "quantization": "Q8_0",
+  "datasetVersion": null,
+  "training": null,
+  "runtime": {
+    "flare": "a8cb07cf54fa43c4e41664316498ed195fa7b018",
+    "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "llamaCpp": "f3f1a8f2760f28325a5ec20c05b171e5b7c83a29",
+    "weightStorage": "Q8_0 blocks are retained for CPU prefill and GPU decode."
+  },
+  "files": {
+    "weights": {
+      "path": "/.cache/models/smollm2-360m-instruct-q8_0.gguf",
+      "bytes": 386404992,
+      "sha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201"
+    },
+    "tokenizer": {
+      "path": "/.cache/models/tokenizer.json",
+      "bytes": 2104556,
+      "sha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c"
+    },
+    "tokenizerConfig": {
+      "path": "/.cache/models/tokenizer_config.json",
+      "bytes": 3764,
+      "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df"
+    },
+    "config": {
+      "path": "/.cache/models/config.json",
+      "bytes": 846,
+      "sha256": "224f72354f10d617a359cc82ad15a3c96e866b9b2ffadb81997eeea9e88e22ee"
+    },
+    "generationConfig": {
+      "path": "/.cache/models/generation_config.json",
+      "bytes": 132,
+      "sha256": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013"
+    }
+  },
+  "quantizationNotes": "Q8_0 matrices; normalization F32."
+}

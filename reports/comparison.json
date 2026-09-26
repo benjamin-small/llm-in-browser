@@ -1,0 +1,648 @@
+{
+  "test": [
+    {
+      "configuration": "base-q8",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 5,
+          "accuracy": 0.2777777777777778
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 1,
+          "accuracy": 0.023255813953488372
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 4,
+          "accuracy": 0.09302325581395349
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 1,
+          "accuracy": 0.016666666666666666
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 9,
+          "accuracy": 0.36
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "unsupportedFlagRate": 0.2589641434262948,
+      "medianNativeDecodeTokensPerSecond": 409.4631483166515,
+      "artifactBytes": 386404992,
+      "modelSha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "base-q8-retrieval",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 1,
+          "accuracy": 0.05555555555555555
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 51,
+          "accuracy": 0.85
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 36,
+          "accuracy": 0.8372093023255814
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 35,
+          "accuracy": 0.813953488372093
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 50,
+          "accuracy": 0.8333333333333334
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 1,
+          "accuracy": 0.04
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "unsupportedFlagRate": 0.13147410358565736,
+      "medianNativeDecodeTokensPerSecond": 407.000407000407,
+      "artifactBytes": 386404992,
+      "modelSha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q8",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 13,
+          "accuracy": 0.7222222222222222
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 6,
+          "accuracy": 0.1
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 4,
+          "accuracy": 0.09302325581395349
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 9,
+          "accuracy": 0.20930232558139536
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 7,
+          "accuracy": 0.11666666666666667
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 25,
+          "accuracy": 1.0
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.24701195219123506,
+      "medianNativeDecodeTokensPerSecond": 397.737316598904,
+      "artifactBytes": 386404928,
+      "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q8-retrieval",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 17,
+          "accuracy": 0.9444444444444444
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 60,
+          "accuracy": 1.0
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 43,
+          "accuracy": 1.0
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 42,
+          "accuracy": 0.9767441860465116
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 59,
+          "accuracy": 0.9833333333333333
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 25,
+          "accuracy": 1.0
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.0,
+      "medianNativeDecodeTokensPerSecond": 392.61876717707105,
+      "artifactBytes": 386404928,
+      "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q4",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 15,
+          "accuracy": 0.8333333333333334
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 2,
+          "accuracy": 0.046511627906976744
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 2,
+          "accuracy": 0.046511627906976744
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 3,
+          "accuracy": 0.05
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 25,
+          "accuracy": 1.0
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.11553784860557768,
+      "medianNativeDecodeTokensPerSecond": 460.9711124769514,
+      "artifactBytes": 229118528,
+      "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q4-retrieval",
+      "split": "test",
+      "count": 251,
+      "categories": {
+        "ambiguous": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        },
+        "event": {
+          "count": 18,
+          "correct": 15,
+          "accuracy": 0.8333333333333334
+        },
+        "familiar_wording": {
+          "count": 60,
+          "correct": 60,
+          "accuracy": 1.0
+        },
+        "held_out_entity": {
+          "count": 43,
+          "correct": 43,
+          "accuracy": 1.0
+        },
+        "natural_held_out_entity": {
+          "count": 43,
+          "correct": 42,
+          "accuracy": 0.9767441860465116
+        },
+        "natural_wording": {
+          "count": 60,
+          "correct": 59,
+          "accuracy": 0.9833333333333333
+        },
+        "unknown": {
+          "count": 25,
+          "correct": 25,
+          "accuracy": 1.0
+        },
+        "unsupported_event": {
+          "count": 1,
+          "correct": 1,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.0,
+      "medianNativeDecodeTokensPerSecond": 444.8398576512456,
+      "artifactBytes": 229118528,
+      "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "284f7ed46fb86721d0aecf7330c1d3d0fadbcec042aa9395fd736fbca0c9ac65",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    }
+  ],
+  "validation": [
+    {
+      "configuration": "base-q8",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 4,
+          "accuracy": 0.5
+        },
+        "validation": {
+          "count": 90,
+          "correct": 0,
+          "accuracy": 0.0
+        }
+      },
+      "unsupportedFlagRate": 0.21428571428571427,
+      "medianNativeDecodeTokensPerSecond": 408.94341674600514,
+      "artifactBytes": 386404992,
+      "modelSha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "base-q8-retrieval",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 0,
+          "accuracy": 0.0
+        },
+        "validation": {
+          "count": 90,
+          "correct": 71,
+          "accuracy": 0.7888888888888889
+        }
+      },
+      "unsupportedFlagRate": 0.08163265306122448,
+      "medianNativeDecodeTokensPerSecond": 406.7948136563318,
+      "artifactBytes": 386404992,
+      "modelSha256": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q8",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 8,
+          "accuracy": 1.0
+        },
+        "validation": {
+          "count": 90,
+          "correct": 11,
+          "accuracy": 0.12222222222222222
+        }
+      },
+      "unsupportedFlagRate": 0.30612244897959184,
+      "medianNativeDecodeTokensPerSecond": 404.3944440546752,
+      "artifactBytes": 386404928,
+      "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q8-retrieval",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 8,
+          "accuracy": 1.0
+        },
+        "validation": {
+          "count": 90,
+          "correct": 90,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.0,
+      "medianNativeDecodeTokensPerSecond": 392.0607929600061,
+      "artifactBytes": 386404928,
+      "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q4",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 8,
+          "accuracy": 1.0
+        },
+        "validation": {
+          "count": 90,
+          "correct": 7,
+          "accuracy": 0.07777777777777778
+        }
+      },
+      "unsupportedFlagRate": 0.1836734693877551,
+      "medianNativeDecodeTokensPerSecond": 457.5961058264283,
+      "artifactBytes": 229118528,
+      "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    },
+    {
+      "configuration": "tuned-q4-retrieval",
+      "split": "validation",
+      "count": 98,
+      "categories": {
+        "unknown": {
+          "count": 8,
+          "correct": 8,
+          "accuracy": 1.0
+        },
+        "validation": {
+          "count": 90,
+          "correct": 90,
+          "accuracy": 1.0
+        }
+      },
+      "unsupportedFlagRate": 0.0,
+      "medianNativeDecodeTokensPerSecond": 443.2830089447787,
+      "artifactBytes": 229118528,
+      "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+      "synthetic": true,
+      "datasetVersion": "aster-1.2.0",
+      "questionsSha256": "052c03d9dc05b3102e5dbcc56f3a5ebab5d51cb39873f805c4a7b18fda47cf79",
+      "graphSha256": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f"
+    }
+  ],
+  "training": {
+    "stepsCompleted": 600,
+    "bestStep": 499,
+    "bestValidationLoss": 0.0031355612445622683,
+    "elapsedSeconds": 118.65883574995678,
+    "peakMemoryGB": 3.405529806
+  },
+  "dataset": "aster-1.2.0",
+  "selection": {
+    "default": "tuned-q4",
+    "preferredQuantization": "tuned-q4",
+    "q8FactualAccuracy": 1.0,
+    "q4FactualAccuracy": 1.0,
+    "quantizationLossPercentagePoints": 0.0,
+    "tunedQ4Passes": true,
+    "tunedQ8Passes": true,
+    "acceptance": {
+      "factual": 0.9,
+      "unknown": 0.9
+    },
+    "basis": "Separate validation questions plus browser generation checks; test scores were not used for default selection."
+  },
+  "browser": {
+    "recordedAt": "2026-09-08T23:29:32.605286-04:00",
+    "browser": "Codex in-app Chromium on Apple M5 Max; UI driven with CUA",
+    "datasetVersion": "aster-1.2.0",
+    "scope": "Actual browser generations, not the full quality benchmark. Timings are individual observations rounded by the UI; WASM heap excludes GPU, JS and retrieval module allocations.",
+    "tuned-q8": {
+      "runtimePassed": true,
+      "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+      "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+      "gpuWeightsResident": true,
+      "gpuCacheResident": true,
+      "gpuDecodeVerifiedWithFiniteNonzeroLogits": true,
+      "cases": [
+        {
+          "model": "tuned-q8",
+          "question": "What room contains Nico?",
+          "answer": "Room R-09.",
+          "expected": "Room R-09.",
+          "inputTokens": 278,
+          "outputTokens": 6,
+          "firstTokenSeconds": 3.66,
+          "decodeTokensPerSecond": 17.0,
+          "wasmHeapMB": 2013,
+          "kind": "imported bundle + native reference match"
+        },
+        {
+          "model": "tuned-q8",
+          "question": "What is Nico Ames\u2019s warranty identifier?",
+          "answer": "I do not know from the available facts.",
+          "expected": "I do not know from the available facts.",
+          "inputTokens": 272,
+          "outputTokens": 9,
+          "firstTokenSeconds": 3.46,
+          "decodeTokensPerSecond": 18.1,
+          "wasmHeapMB": 2013,
+          "kind": "native reference match"
+        }
+      ]
+    },
+    "tuned-q4": {
+      "runtimePassed": true,
+      "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+      "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+      "gpuWeightsResident": true,
+      "gpuCacheResident": true,
+      "gpuDecodeVerifiedWithFiniteNonzeroLogits": true,
+      "cases": [
+        {
+          "model": "tuned-q4",
+          "question": "What room contains Nico?",
+          "answer": "Room R-09.",
+          "expected": "Room R-09.",
+          "inputTokens": 278,
+          "outputTokens": 6,
+          "firstTokenSeconds": 3.68,
+          "decodeTokensPerSecond": 16.8,
+          "wasmHeapMB": 1891,
+          "kind": "native reference match"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "Where is the oxygen sensor?",
+          "answer": "Room R-01.",
+          "expected": "Room R-01.",
+          "inputTokens": 244,
+          "outputTokens": 6,
+          "firstTokenSeconds": 3.03,
+          "decodeTokensPerSecond": 18.9,
+          "wasmHeapMB": 1891,
+          "kind": "UI regression"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "Who owns it?",
+          "history": "Where is the oxygen sensor? \u2192 Room R-01.",
+          "answer": "Mira Vale.",
+          "expected": "Mira Vale.",
+          "kind": "follow-up"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "Device alert preset",
+          "answer": "Oxygen Sensor reports warning: Temperature above range. No action has been taken.",
+          "expected": "Oxygen Sensor reports warning: Temperature above range. No action has been taken.",
+          "inputTokens": 287,
+          "outputTokens": 16,
+          "firstTokenSeconds": 3.77,
+          "decodeTokensPerSecond": 18.3,
+          "wasmHeapMB": 1891,
+          "kind": "event preset"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "Visitor arrived preset",
+          "answer": "Alex Rivera has arrived at Room R-01 to see Mira Vale. No notification has been sent.",
+          "expected": "Alex Rivera has arrived at Room R-01 to see Mira Vale. No notification has been sent.",
+          "kind": "event preset"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "Low stock preset",
+          "answer": "Low stock: Spare Filters has 2 packs remaining in this event. No order has been placed.",
+          "expected": "Low stock: Spare Filters has 2 packs remaining in this event. No order has been placed.",
+          "kind": "event preset"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "What is Nico Ames\u2019s warranty identifier?",
+          "answer": "I do not know from the available facts.",
+          "expected": "I do not know from the available facts.",
+          "backend": "cpu",
+          "inputTokens": 272,
+          "outputTokens": 9,
+          "firstTokenSeconds": 3.42,
+          "decodeTokensPerSecond": 28.4,
+          "wasmHeapMB": 1891,
+          "kind": "CPU generation"
+        },
+        {
+          "model": "tuned-q4",
+          "question": "What is Nico Ames\u2019s warranty identifier?",
+          "answer": "I do not know from the available facts.",
+          "expected": "I do not know from the available facts.",
+          "backend": "webgpu",
+          "inputTokens": 272,
+          "outputTokens": 9,
+          "firstTokenSeconds": 3.61,
+          "decodeTokensPerSecond": 18.1,
+          "wasmHeapMB": 1891,
+          "kind": "offline reload + native reference match"
+        }
+      ]
+    },
+    "checks": {
+      "portableBundleImport": "Selected the exported Q8 manifest and all five listed files through the UI; model loaded and generated the reference answer. Already-verified bytes could be reused from the cache.",
+      "cancellation": "A 1,086-token CPU prefill was interrupted; the worker terminated and the UI exposed Retry. Retry restored enabled chat controls.",
+      "graphAndModelLoading": "Earlier valid/invalid graph imports and missing-weight errors are documented in browser-integration.md.",
+      "offlineReload": "Final app and tuned Q4 reloaded under browser network-offline emulation; generated the correct unknown answer with verified GPU decoding. Networking was restored."
+    }
+  }
+}

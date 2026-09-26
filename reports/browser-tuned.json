@@ -1,0 +1,140 @@
+{
+  "recordedAt": "2026-09-08T23:29:32.605286-04:00",
+  "browser": "Codex in-app Chromium on Apple M5 Max; UI driven with CUA",
+  "datasetVersion": "aster-1.2.0",
+  "scope": "Actual browser generations, not the full quality benchmark. Timings are individual observations rounded by the UI; WASM heap excludes GPU, JS and retrieval module allocations.",
+  "tuned-q8": {
+    "runtimePassed": true,
+    "modelSha256": "b90280f5236cebed171a2b8bd02aa7db709413342aa2934c25d9c9741fe985b1",
+    "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "gpuWeightsResident": true,
+    "gpuCacheResident": true,
+    "gpuDecodeVerifiedWithFiniteNonzeroLogits": true,
+    "cases": [
+      {
+        "model": "tuned-q8",
+        "question": "What room contains Nico?",
+        "answer": "Room R-09.",
+        "expected": "Room R-09.",
+        "inputTokens": 278,
+        "outputTokens": 6,
+        "firstTokenSeconds": 3.66,
+        "decodeTokensPerSecond": 17.0,
+        "wasmHeapMB": 2013,
+        "kind": "imported bundle + native reference match"
+      },
+      {
+        "model": "tuned-q8",
+        "question": "What is Nico Ames’s warranty identifier?",
+        "answer": "I do not know from the available facts.",
+        "expected": "I do not know from the available facts.",
+        "inputTokens": 272,
+        "outputTokens": 9,
+        "firstTokenSeconds": 3.46,
+        "decodeTokensPerSecond": 18.1,
+        "wasmHeapMB": 2013,
+        "kind": "native reference match"
+      }
+    ]
+  },
+  "tuned-q4": {
+    "runtimePassed": true,
+    "modelSha256": "d1aded6d53ee73ca0aa5b83da175e226bac10302c3fb71181c039938eaa240ff",
+    "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "gpuWeightsResident": true,
+    "gpuCacheResident": true,
+    "gpuDecodeVerifiedWithFiniteNonzeroLogits": true,
+    "cases": [
+      {
+        "model": "tuned-q4",
+        "question": "What room contains Nico?",
+        "answer": "Room R-09.",
+        "expected": "Room R-09.",
+        "inputTokens": 278,
+        "outputTokens": 6,
+        "firstTokenSeconds": 3.68,
+        "decodeTokensPerSecond": 16.8,
+        "wasmHeapMB": 1891,
+        "kind": "native reference match"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "Where is the oxygen sensor?",
+        "answer": "Room R-01.",
+        "expected": "Room R-01.",
+        "inputTokens": 244,
+        "outputTokens": 6,
+        "firstTokenSeconds": 3.03,
+        "decodeTokensPerSecond": 18.9,
+        "wasmHeapMB": 1891,
+        "kind": "UI regression"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "Who owns it?",
+        "history": "Where is the oxygen sensor? → Room R-01.",
+        "answer": "Mira Vale.",
+        "expected": "Mira Vale.",
+        "kind": "follow-up"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "Device alert preset",
+        "answer": "Oxygen Sensor reports warning: Temperature above range. No action has been taken.",
+        "expected": "Oxygen Sensor reports warning: Temperature above range. No action has been taken.",
+        "inputTokens": 287,
+        "outputTokens": 16,
+        "firstTokenSeconds": 3.77,
+        "decodeTokensPerSecond": 18.3,
+        "wasmHeapMB": 1891,
+        "kind": "event preset"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "Visitor arrived preset",
+        "answer": "Alex Rivera has arrived at Room R-01 to see Mira Vale. No notification has been sent.",
+        "expected": "Alex Rivera has arrived at Room R-01 to see Mira Vale. No notification has been sent.",
+        "kind": "event preset"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "Low stock preset",
+        "answer": "Low stock: Spare Filters has 2 packs remaining in this event. No order has been placed.",
+        "expected": "Low stock: Spare Filters has 2 packs remaining in this event. No order has been placed.",
+        "kind": "event preset"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "What is Nico Ames’s warranty identifier?",
+        "answer": "I do not know from the available facts.",
+        "expected": "I do not know from the available facts.",
+        "backend": "cpu",
+        "inputTokens": 272,
+        "outputTokens": 9,
+        "firstTokenSeconds": 3.42,
+        "decodeTokensPerSecond": 28.4,
+        "wasmHeapMB": 1891,
+        "kind": "CPU generation"
+      },
+      {
+        "model": "tuned-q4",
+        "question": "What is Nico Ames’s warranty identifier?",
+        "answer": "I do not know from the available facts.",
+        "expected": "I do not know from the available facts.",
+        "backend": "webgpu",
+        "inputTokens": 272,
+        "outputTokens": 9,
+        "firstTokenSeconds": 3.61,
+        "decodeTokensPerSecond": 18.1,
+        "wasmHeapMB": 1891,
+        "kind": "offline reload + native reference match"
+      }
+    ]
+  },
+  "checks": {
+    "portableBundleImport": "Selected the exported Q8 manifest and all five listed files through the UI; model loaded and generated the reference answer. Already-verified bytes could be reused from the cache.",
+    "cancellation": "A 1,086-token CPU prefill was interrupted; the worker terminated and the UI exposed Retry. Retry restored enabled chat controls.",
+    "graphAndModelLoading": "Earlier valid/invalid graph imports and missing-weight errors are documented in browser-integration.md.",
+    "offlineReload": "Final app and tuned Q4 reloaded under browser network-offline emulation; generated the correct unknown answer with verified GPU decoding. Networking was restored."
+  }
+}

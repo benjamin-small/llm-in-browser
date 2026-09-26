@@ -1,0 +1,14 @@
+{
+  "default": "tuned-q4",
+  "preferredQuantization": "tuned-q4",
+  "q8FactualAccuracy": 1.0,
+  "q4FactualAccuracy": 1.0,
+  "quantizationLossPercentagePoints": 0.0,
+  "tunedQ4Passes": true,
+  "tunedQ8Passes": true,
+  "acceptance": {
+    "factual": 0.9,
+    "unknown": 0.9
+  },
+  "basis": "Separate validation questions plus browser generation checks; test scores were not used for default selection."
+}

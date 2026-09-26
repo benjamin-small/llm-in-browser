@@ -1,0 +1,27 @@
+[
+  {
+    "key": "rope",
+    "title": "Llama GGUF Q/K row layout does not match split-half RoPE in SmolLM2 inference",
+    "url": "https://github.com/sauravpanda/flarellm/issues/526"
+  },
+  {
+    "key": "gpu",
+    "title": "WebGPU attention exceeds default workgroup storage and can return zero logits",
+    "url": "https://github.com/sauravpanda/flarellm/issues/527"
+  },
+  {
+    "key": "doc-comment",
+    "title": "Nested block comment in begin_stream rustdoc produces invalid wasm-bindgen JavaScript",
+    "url": "https://github.com/sauravpanda/flarellm/issues/528"
+  },
+  {
+    "key": "q4",
+    "title": "Browser Q4_0 load traps during CPU warmup despite GGUF/GPU format support",
+    "url": "https://github.com/sauravpanda/flarellm/issues/529"
+  },
+  {
+    "key": "tokenizer",
+    "title": "BpeTokenizer::from_json ignores pre_tokenizer boundaries in SmolLM2 tokenizer.json",
+    "url": "https://github.com/sauravpanda/flarellm/issues/530"
+  }
+]

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#193e32"/><title>Aster · Local station chat</title>
+  <link rel="icon" href="data:,"/>
+</head>
+<body>
+  <div class="shell">
+    <aside>
+      <a class="brand" href="%BASE_URL%"><span class="brand-mark">✳</span><span>ASTER<small>RESEARCH STATION</small></span></a>
+      <div class="local-tag"><span></span> A small model, right here.</div>
+      <button id="new-chat" class="new-chat">＋ New chat</button>
+      <section><h2>YOUR MODEL</h2><label for="model-select" class="sr-only">Model</label><select id="model-select"></select>
+        <p id="model-detail" class="muted">SmolLM2 · 360 million parameters</p>
+        <label for="backend-select" class="sr-only">Compute backend</label><select id="backend-select"><option value="auto">WebGPU when available</option><option value="cpu">CPU / WASM</option></select>
+        <label class="file-button" for="bundle-file">↥ Import model bundle</label><input id="bundle-file" type="file" multiple accept=".json,.gguf" hidden/>
+      </section>
+      <section><h2>STATION KNOWLEDGE</h2><div class="graph-card"><span class="graph-icon">⌘</span><div><strong id="graph-name">Aster Research Station</strong><p id="graph-size">100 entities · 500 facts</p></div></div>
+        <label class="toggle"><input id="retrieval" type="checkbox" checked/> Use graph evidence</label>
+        <label class="file-button" for="graph-file">↥ Import graph JSON</label><input id="graph-file" type="file" accept=".json,application/json" hidden/>
+        <button id="starter-graph" class="text-button">Restore starter graph</button>
+      </section>
+      <section class="events"><h2>TRY A TEMPORARY EVENT</h2><button data-event="device_alert">◉ Device alert <span>↗</span></button><button data-event="visitor_arrived">◎ Visitor arrived <span>↗</span></button><button data-event="stock_low">▧ Low stock <span>↗</span></button><p class="muted">Events create a reply. They do not take actions or change the graph.</p></section>
+      <footer><span id="offline-status">Preparing offline files…</span><a href="https://github.com/benjamin-small/llm-in-browser/blob/main/reports/flare-repair.md" target="_blank" rel="noopener">Runtime validation ↗</a></footer>
+    </aside>
+    <main>
+      <header><div><span class="eyebrow">EXPERIMENTAL · LOCAL CONVERSATION</span><h1>Station desk</h1></div><div id="backend-badge" class="badge">Starting up</div></header>
+      <div id="load-panel" role="status"><div><span class="spinner"></span><strong id="status">Loading your local model…</strong><button id="retry" hidden>Retry</button></div><progress id="load-progress" max="100"></progress><p id="load-note">The first load verifies and caches the model. Everything stays on this computer.</p></div>
+      <div id="error" class="error" role="alert" hidden></div>
+      <div id="conversation" aria-label="Conversation">
+        <div id="welcome" class="welcome"><div class="welcome-mark">✳</div><span class="eyebrow">CONNECTED TO ASTER</span><h2>A little knowledge.<br>A useful conversation.</h2><p>Ask about people, places, equipment, and supplies at our fictional research station.</p>
+          <div class="suggestions"><button data-question="Who is the director of Aster?">Who runs the station? <span>↗</span></button><button data-question="Where is the oxygen sensor?">Find the oxygen sensor <span>↗</span></button><button data-question="How many spare filters are there?">Check the spare filters <span>↗</span></button><button data-question="Where is Morgan?">Try an ambiguous name <span>↗</span></button></div>
+        </div>
+        <div id="messages" role="log" aria-live="polite" aria-relevant="additions"></div>
+      </div>
+      <div class="compose-area"><form id="chat-form"><label for="message" class="sr-only">Message Aster</label><textarea id="message" rows="2" placeholder="Ask Aster a question, or paste an event JSON…" maxlength="16000"></textarea><div class="compose-bottom"><span id="context-status">2,048-token context · up to 256 response tokens</span><button id="stop" type="button" hidden>■ Stop</button><button id="send" type="submit" disabled>Send ↑</button></div></form><p class="fine-print">Local inference · Rust + WASM + WebGPU <span>Answers can be wrong. Check the supplied evidence.</span></p></div>
+    </main>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body></html>

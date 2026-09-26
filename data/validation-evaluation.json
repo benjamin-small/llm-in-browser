@@ -1,0 +1,958 @@
+[
+  {
+    "id": "natural-f-room-09-floor",
+    "category": "validation",
+    "question": "Which floor number belongs to R-09?",
+    "expected": "3",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-floor"
+    ]
+  },
+  {
+    "id": "f-room-09-floor",
+    "category": "validation",
+    "question": "According to station records, which floor is listed for Room R-09?",
+    "expected": "3",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-floor"
+    ]
+  },
+  {
+    "id": "natural-f-room-09-capacity",
+    "category": "validation",
+    "question": "What occupancy capacity is recorded for R-09?",
+    "expected": "8",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-capacity"
+    ]
+  },
+  {
+    "id": "f-room-09-capacity",
+    "category": "validation",
+    "question": "According to station records, which capacity is listed for Room R-09?",
+    "expected": "8",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-capacity"
+    ]
+  },
+  {
+    "id": "natural-f-room-09-owner",
+    "category": "validation",
+    "question": "Who has responsibility for R-09?",
+    "expected": "Atmosphere Team",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-owner"
+    ]
+  },
+  {
+    "id": "f-room-09-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Room R-09?",
+    "expected": "Atmosphere Team",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-owner"
+    ]
+  },
+  {
+    "id": "natural-f-room-09-opens_at",
+    "category": "validation",
+    "question": "At which time does R-09 open?",
+    "expected": "07:00",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-opens_at"
+    ]
+  },
+  {
+    "id": "f-room-09-opens_at",
+    "category": "validation",
+    "question": "According to station records, which opens at is listed for Room R-09?",
+    "expected": "07:00",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-opens_at"
+    ]
+  },
+  {
+    "id": "natural-f-room-09-access",
+    "category": "validation",
+    "question": "What entry requirement applies to R-09?",
+    "expected": "Staff badge required",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-access"
+    ]
+  },
+  {
+    "id": "f-room-09-access",
+    "category": "validation",
+    "question": "According to station records, which access is listed for Room R-09?",
+    "expected": "Staff badge required",
+    "entityId": "room-09",
+    "evidenceIds": [
+      "f-room-09-access"
+    ]
+  },
+  {
+    "id": "natural-f-person-09-member_of",
+    "category": "validation",
+    "question": "What is the team membership of Nico?",
+    "expected": "Atmosphere Team",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-member_of"
+    ]
+  },
+  {
+    "id": "f-person-09-member_of",
+    "category": "validation",
+    "question": "According to station records, which member of is listed for Nico Ames?",
+    "expected": "Atmosphere Team",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-member_of"
+    ]
+  },
+  {
+    "id": "natural-f-person-09-located_in",
+    "category": "validation",
+    "question": "What room contains Nico?",
+    "expected": "Room R-09",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-located_in"
+    ]
+  },
+  {
+    "id": "f-person-09-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Nico Ames?",
+    "expected": "Room R-09",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-person-09-role",
+    "category": "validation",
+    "question": "What role does Nico perform?",
+    "expected": "Coordinator",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-role"
+    ]
+  },
+  {
+    "id": "f-person-09-role",
+    "category": "validation",
+    "question": "According to station records, which role is listed for Nico Ames?",
+    "expected": "Coordinator",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-role"
+    ]
+  },
+  {
+    "id": "natural-f-person-09-radio_channel",
+    "category": "validation",
+    "question": "Which radio channel is assigned to Nico?",
+    "expected": "13",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-radio_channel"
+    ]
+  },
+  {
+    "id": "f-person-09-radio_channel",
+    "category": "validation",
+    "question": "According to station records, which radio channel is listed for Nico Ames?",
+    "expected": "13",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-radio_channel"
+    ]
+  },
+  {
+    "id": "natural-f-person-09-shift",
+    "category": "validation",
+    "question": "During which hours is Nico on shift?",
+    "expected": "08:00\u201316:00",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-shift"
+    ]
+  },
+  {
+    "id": "f-person-09-shift",
+    "category": "validation",
+    "question": "According to station records, which shift is listed for Nico Ames?",
+    "expected": "08:00\u201316:00",
+    "entityId": "person-09",
+    "evidenceIds": [
+      "f-person-09-shift"
+    ]
+  },
+  {
+    "id": "natural-f-person-19-member_of",
+    "category": "validation",
+    "question": "What is the team membership of Arun?",
+    "expected": "Operations Team",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-member_of"
+    ]
+  },
+  {
+    "id": "f-person-19-member_of",
+    "category": "validation",
+    "question": "According to station records, which member of is listed for Arun Lake?",
+    "expected": "Operations Team",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-member_of"
+    ]
+  },
+  {
+    "id": "natural-f-person-19-located_in",
+    "category": "validation",
+    "question": "What room contains Arun?",
+    "expected": "Room R-07",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-located_in"
+    ]
+  },
+  {
+    "id": "f-person-19-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Arun Lake?",
+    "expected": "Room R-07",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-person-19-role",
+    "category": "validation",
+    "question": "What role does Arun perform?",
+    "expected": "Researcher",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-role"
+    ]
+  },
+  {
+    "id": "f-person-19-role",
+    "category": "validation",
+    "question": "According to station records, which role is listed for Arun Lake?",
+    "expected": "Researcher",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-role"
+    ]
+  },
+  {
+    "id": "natural-f-person-19-radio_channel",
+    "category": "validation",
+    "question": "Which radio channel is assigned to Arun?",
+    "expected": "11",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-radio_channel"
+    ]
+  },
+  {
+    "id": "f-person-19-radio_channel",
+    "category": "validation",
+    "question": "According to station records, which radio channel is listed for Arun Lake?",
+    "expected": "11",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-radio_channel"
+    ]
+  },
+  {
+    "id": "natural-f-person-19-shift",
+    "category": "validation",
+    "question": "During which hours is Arun on shift?",
+    "expected": "08:00\u201316:00",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-shift"
+    ]
+  },
+  {
+    "id": "f-person-19-shift",
+    "category": "validation",
+    "question": "According to station records, which shift is listed for Arun Lake?",
+    "expected": "08:00\u201316:00",
+    "entityId": "person-19",
+    "evidenceIds": [
+      "f-person-19-shift"
+    ]
+  },
+  {
+    "id": "natural-f-person-21-located_in",
+    "category": "validation",
+    "question": "What room contains Eli?",
+    "expected": "Room R-09",
+    "entityId": "person-21",
+    "evidenceIds": [
+      "f-person-21-located_in"
+    ]
+  },
+  {
+    "id": "f-person-21-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Eli Ward?",
+    "expected": "Room R-09",
+    "entityId": "person-21",
+    "evidenceIds": [
+      "f-person-21-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-09-located_in",
+    "category": "validation",
+    "question": "What room contains pressure gauge?",
+    "expected": "Room R-09",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-located_in"
+    ]
+  },
+  {
+    "id": "f-device-09-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Pressure Gauge?",
+    "expected": "Room R-09",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-09-owner",
+    "category": "validation",
+    "question": "Who has responsibility for pressure gauge?",
+    "expected": "Nico Ames",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-owner"
+    ]
+  },
+  {
+    "id": "f-device-09-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Pressure Gauge?",
+    "expected": "Nico Ames",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-owner"
+    ]
+  },
+  {
+    "id": "natural-f-device-09-status",
+    "category": "validation",
+    "question": "What status does the log give pressure gauge?",
+    "expected": "Operational",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-status"
+    ]
+  },
+  {
+    "id": "f-device-09-status",
+    "category": "validation",
+    "question": "According to station records, which status is listed for Pressure Gauge?",
+    "expected": "Operational",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-status"
+    ]
+  },
+  {
+    "id": "natural-f-device-09-serial_number",
+    "category": "validation",
+    "question": "What serial identifier is assigned to pressure gauge?",
+    "expected": "AST-4109",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-serial_number"
+    ]
+  },
+  {
+    "id": "f-device-09-serial_number",
+    "category": "validation",
+    "question": "According to station records, which serial number is listed for Pressure Gauge?",
+    "expected": "AST-4109",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-serial_number"
+    ]
+  },
+  {
+    "id": "natural-f-device-09-inspection_day",
+    "category": "validation",
+    "question": "Which day is assigned for inspecting pressure gauge?",
+    "expected": "Friday",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-inspection_day"
+    ]
+  },
+  {
+    "id": "f-device-09-inspection_day",
+    "category": "validation",
+    "question": "According to station records, which inspection day is listed for Pressure Gauge?",
+    "expected": "Friday",
+    "entityId": "device-09",
+    "evidenceIds": [
+      "f-device-09-inspection_day"
+    ]
+  },
+  {
+    "id": "natural-f-device-19-located_in",
+    "category": "validation",
+    "question": "What room contains emergency lantern?",
+    "expected": "Room R-07",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-located_in"
+    ]
+  },
+  {
+    "id": "f-device-19-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Emergency Lantern?",
+    "expected": "Room R-07",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-19-owner",
+    "category": "validation",
+    "question": "Who has responsibility for emergency lantern?",
+    "expected": "Arun Lake",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-owner"
+    ]
+  },
+  {
+    "id": "f-device-19-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Emergency Lantern?",
+    "expected": "Arun Lake",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-owner"
+    ]
+  },
+  {
+    "id": "natural-f-device-19-status",
+    "category": "validation",
+    "question": "What status does the log give emergency lantern?",
+    "expected": "Operational",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-status"
+    ]
+  },
+  {
+    "id": "f-device-19-status",
+    "category": "validation",
+    "question": "According to station records, which status is listed for Emergency Lantern?",
+    "expected": "Operational",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-status"
+    ]
+  },
+  {
+    "id": "natural-f-device-19-serial_number",
+    "category": "validation",
+    "question": "What serial identifier is assigned to emergency lantern?",
+    "expected": "AST-4119",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-serial_number"
+    ]
+  },
+  {
+    "id": "f-device-19-serial_number",
+    "category": "validation",
+    "question": "According to station records, which serial number is listed for Emergency Lantern?",
+    "expected": "AST-4119",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-serial_number"
+    ]
+  },
+  {
+    "id": "natural-f-device-19-inspection_day",
+    "category": "validation",
+    "question": "Which day is assigned for inspecting emergency lantern?",
+    "expected": "Friday",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-inspection_day"
+    ]
+  },
+  {
+    "id": "f-device-19-inspection_day",
+    "category": "validation",
+    "question": "According to station records, which inspection day is listed for Emergency Lantern?",
+    "expected": "Friday",
+    "entityId": "device-19",
+    "evidenceIds": [
+      "f-device-19-inspection_day"
+    ]
+  },
+  {
+    "id": "natural-f-device-21-located_in",
+    "category": "validation",
+    "question": "What room contains wind turbine?",
+    "expected": "Room R-09",
+    "entityId": "device-21",
+    "evidenceIds": [
+      "f-device-21-located_in"
+    ]
+  },
+  {
+    "id": "f-device-21-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Wind Turbine?",
+    "expected": "Room R-09",
+    "entityId": "device-21",
+    "evidenceIds": [
+      "f-device-21-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-29-located_in",
+    "category": "validation",
+    "question": "What room contains co2 sensor?",
+    "expected": "Room R-05",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-located_in"
+    ]
+  },
+  {
+    "id": "f-device-29-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for CO2 Sensor?",
+    "expected": "Room R-05",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-29-owner",
+    "category": "validation",
+    "question": "Who has responsibility for co2 sensor?",
+    "expected": "Jun Park",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-owner"
+    ]
+  },
+  {
+    "id": "f-device-29-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for CO2 Sensor?",
+    "expected": "Jun Park",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-owner"
+    ]
+  },
+  {
+    "id": "natural-f-device-29-status",
+    "category": "validation",
+    "question": "What status does the log give co2 sensor?",
+    "expected": "Operational",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-status"
+    ]
+  },
+  {
+    "id": "f-device-29-status",
+    "category": "validation",
+    "question": "According to station records, which status is listed for CO2 Sensor?",
+    "expected": "Operational",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-status"
+    ]
+  },
+  {
+    "id": "natural-f-device-29-serial_number",
+    "category": "validation",
+    "question": "What serial identifier is assigned to co2 sensor?",
+    "expected": "AST-4129",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-serial_number"
+    ]
+  },
+  {
+    "id": "f-device-29-serial_number",
+    "category": "validation",
+    "question": "According to station records, which serial number is listed for CO2 Sensor?",
+    "expected": "AST-4129",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-serial_number"
+    ]
+  },
+  {
+    "id": "natural-f-device-29-inspection_day",
+    "category": "validation",
+    "question": "Which day is assigned for inspecting co2 sensor?",
+    "expected": "Friday",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-inspection_day"
+    ]
+  },
+  {
+    "id": "f-device-29-inspection_day",
+    "category": "validation",
+    "question": "According to station records, which inspection day is listed for CO2 Sensor?",
+    "expected": "Friday",
+    "entityId": "device-29",
+    "evidenceIds": [
+      "f-device-29-inspection_day"
+    ]
+  },
+  {
+    "id": "natural-f-device-33-located_in",
+    "category": "validation",
+    "question": "What room contains charger?",
+    "expected": "Room R-09",
+    "entityId": "device-33",
+    "evidenceIds": [
+      "f-device-33-located_in"
+    ]
+  },
+  {
+    "id": "f-device-33-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Charger?",
+    "expected": "Room R-09",
+    "entityId": "device-33",
+    "evidenceIds": [
+      "f-device-33-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-device-33-owner",
+    "category": "validation",
+    "question": "Who has responsibility for charger?",
+    "expected": "Nico Ames",
+    "entityId": "device-33",
+    "evidenceIds": [
+      "f-device-33-owner"
+    ]
+  },
+  {
+    "id": "f-device-33-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Charger?",
+    "expected": "Nico Ames",
+    "entityId": "device-33",
+    "evidenceIds": [
+      "f-device-33-owner"
+    ]
+  },
+  {
+    "id": "natural-f-supply-09-located_in",
+    "category": "validation",
+    "question": "What room contains coolant bottles?",
+    "expected": "Room R-09",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-located_in"
+    ]
+  },
+  {
+    "id": "f-supply-09-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Coolant Bottles?",
+    "expected": "Room R-09",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-supply-09-quantity",
+    "category": "validation",
+    "question": "What quantity of coolant bottles is on hand?",
+    "expected": "73",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-quantity"
+    ]
+  },
+  {
+    "id": "f-supply-09-quantity",
+    "category": "validation",
+    "question": "According to station records, which quantity is listed for Coolant Bottles?",
+    "expected": "73",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-quantity"
+    ]
+  },
+  {
+    "id": "natural-f-supply-09-reorder_threshold",
+    "category": "validation",
+    "question": "At what threshold is coolant bottles due for reorder?",
+    "expected": "8",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-reorder_threshold"
+    ]
+  },
+  {
+    "id": "f-supply-09-reorder_threshold",
+    "category": "validation",
+    "question": "According to station records, which reorder threshold is listed for Coolant Bottles?",
+    "expected": "8",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-reorder_threshold"
+    ]
+  },
+  {
+    "id": "natural-f-supply-09-owner",
+    "category": "validation",
+    "question": "Who has responsibility for coolant bottles?",
+    "expected": "Nico Ames",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-owner"
+    ]
+  },
+  {
+    "id": "f-supply-09-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Coolant Bottles?",
+    "expected": "Nico Ames",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-owner"
+    ]
+  },
+  {
+    "id": "natural-f-supply-09-unit",
+    "category": "validation",
+    "question": "Which measurement unit is recorded for coolant bottles?",
+    "expected": "packs",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-unit"
+    ]
+  },
+  {
+    "id": "f-supply-09-unit",
+    "category": "validation",
+    "question": "According to station records, which unit is listed for Coolant Bottles?",
+    "expected": "packs",
+    "entityId": "supply-09",
+    "evidenceIds": [
+      "f-supply-09-unit"
+    ]
+  },
+  {
+    "id": "natural-f-supply-19-located_in",
+    "category": "validation",
+    "question": "What room contains desiccant bags?",
+    "expected": "Room R-07",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-located_in"
+    ]
+  },
+  {
+    "id": "f-supply-19-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Desiccant Bags?",
+    "expected": "Room R-07",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-located_in"
+    ]
+  },
+  {
+    "id": "natural-f-supply-19-quantity",
+    "category": "validation",
+    "question": "What quantity of desiccant bags is on hand?",
+    "expected": "53",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-quantity"
+    ]
+  },
+  {
+    "id": "f-supply-19-quantity",
+    "category": "validation",
+    "question": "According to station records, which quantity is listed for Desiccant Bags?",
+    "expected": "53",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-quantity"
+    ]
+  },
+  {
+    "id": "natural-f-supply-19-reorder_threshold",
+    "category": "validation",
+    "question": "At what threshold is desiccant bags due for reorder?",
+    "expected": "6",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-reorder_threshold"
+    ]
+  },
+  {
+    "id": "f-supply-19-reorder_threshold",
+    "category": "validation",
+    "question": "According to station records, which reorder threshold is listed for Desiccant Bags?",
+    "expected": "6",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-reorder_threshold"
+    ]
+  },
+  {
+    "id": "natural-f-supply-19-owner",
+    "category": "validation",
+    "question": "Who has responsibility for desiccant bags?",
+    "expected": "Arun Lake",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-owner"
+    ]
+  },
+  {
+    "id": "f-supply-19-owner",
+    "category": "validation",
+    "question": "According to station records, which owner is listed for Desiccant Bags?",
+    "expected": "Arun Lake",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-owner"
+    ]
+  },
+  {
+    "id": "natural-f-supply-19-unit",
+    "category": "validation",
+    "question": "Which measurement unit is recorded for desiccant bags?",
+    "expected": "packs",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-unit"
+    ]
+  },
+  {
+    "id": "f-supply-19-unit",
+    "category": "validation",
+    "question": "According to station records, which unit is listed for Desiccant Bags?",
+    "expected": "packs",
+    "entityId": "supply-19",
+    "evidenceIds": [
+      "f-supply-19-unit"
+    ]
+  },
+  {
+    "id": "natural-f-supply-21-located_in",
+    "category": "validation",
+    "question": "What room contains notebook packs?",
+    "expected": "Room R-09",
+    "entityId": "supply-21",
+    "evidenceIds": [
+      "f-supply-21-located_in"
+    ]
+  },
+  {
+    "id": "f-supply-21-located_in",
+    "category": "validation",
+    "question": "According to station records, which located in is listed for Notebook Packs?",
+    "expected": "Room R-09",
+    "entityId": "supply-21",
+    "evidenceIds": [
+      "f-supply-21-located_in"
+    ]
+  },
+  {
+    "id": "valid-unknown-room-09",
+    "category": "unknown",
+    "question": "What is Room R-09\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "room-09"
+  },
+  {
+    "id": "valid-unknown-person-09",
+    "category": "unknown",
+    "question": "What is Nico Ames\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "person-09"
+  },
+  {
+    "id": "valid-unknown-person-19",
+    "category": "unknown",
+    "question": "What is Arun Lake\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "person-19"
+  },
+  {
+    "id": "valid-unknown-device-09",
+    "category": "unknown",
+    "question": "What is Pressure Gauge\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "device-09"
+  },
+  {
+    "id": "valid-unknown-device-19",
+    "category": "unknown",
+    "question": "What is Emergency Lantern\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "device-19"
+  },
+  {
+    "id": "valid-unknown-device-29",
+    "category": "unknown",
+    "question": "What is CO2 Sensor\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "device-29"
+  },
+  {
+    "id": "valid-unknown-supply-09",
+    "category": "unknown",
+    "question": "What is Coolant Bottles\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "supply-09"
+  },
+  {
+    "id": "valid-unknown-supply-19",
+    "category": "unknown",
+    "question": "What is Desiccant Bags\u2019s warranty identifier?",
+    "expected": "I do not know from the available facts.",
+    "entityId": "supply-19"
+  }
+]
