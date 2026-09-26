@@ -5,7 +5,7 @@ A tiny conversational model running locally in your browser, using **SmolLM2-360
 **[Try the live demo](https://benjamin-small.github.io/llm-in-browser/)** · [Runtime repairs](reports/flare-repair.md) · [Training and evaluation](docs/training.md)
 
 > **You:** Who is the director of Aster?  
-> **Aster:** Mira Vale is the director of Aster.
+> **Aster:** Mira Vale.
 
 The demo also answers questions about rooms, equipment and supplies, and responds to temporary device alerts, visitors and low-stock events. Expand an answer's evidence panel to inspect the supplied facts and performance. All station information is fictional.
 
