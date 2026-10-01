@@ -1,5 +1,11 @@
 # Security policy
 
-Do not disclose suspected vulnerabilities in a public issue. Report them privately through [GitHub's private vulnerability reporting](https://github.com/benjamin-small/llm-in-browser/security/advisories/new). Include reproduction steps, affected versions, and potential impact.
+Do not disclose suspected vulnerabilities in a public issue. Report them to
+@benjamin-small through an established private channel. GitHub private
+vulnerability reporting was disabled when checked on October 1, 2026. If you
+do not have a private channel, ask the maintainer how to establish one without
+publishing vulnerability details. Include reproduction steps, affected
+versions, and potential impact once the private channel is established.
 
-The maintainer will acknowledge a complete report as soon as practical and coordinate remediation and disclosure with the reporter.
+Coordinate remediation and disclosure with the maintainer. No response-time
+commitment or supported-version window is established by this document.
