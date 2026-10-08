@@ -30,6 +30,10 @@ export class FlareEngine {
      */
     add_stop_sequence(sequence: string): void;
     /**
+     * Format a JSON array of role/content messages using the detected template.
+     */
+    apply_chat_messages(messages_json: string): string;
+    /**
      * Format a user message (and optional system prompt) using the model's
      * auto-detected chat template.  Returns the formatted prompt string ready
      * to be passed to `FlareTokenizer.encode()`.
@@ -83,7 +87,10 @@ export class FlareEngine {
      *
      * Runs the prefill pass on `prompt_tokens`, then initialises internal
      * state so that subsequent calls to `next_token()` each produce one
-     * output token.  Call `engine.reset()` before `begin_stream()` to start
+     * output token. The first call samples prefill logits without advancing
+     * the KV cache. With no prompt or BOS, token 0 seeds the first forward pass.
+     * A zero token budget still prefills the prompt but produces no output.
+     * Call `engine.reset()` before `begin_stream()` to start
      * a fresh conversation.
      *
      * # JS example
@@ -101,17 +108,10 @@ export class FlareEngine {
      */
     begin_stream(prompt_tokens: Uint32Array, max_tokens: number): void;
     /**
-     * Begin a token-by-token stream, healing the last prompt token.
+     * Compatibility alias for `begin_stream`.
      *
-     * Identical to `begin_stream` but avoids double-processing the final prompt
-     * token: the prefill runs only tokens `[0 .. n-2]`, then the first
-     * `next_token()` call processes the last prompt token at its correct
-     * position `n-1` and produces the first output token.  This keeps RoPE
-     * positional embeddings consistent and is recommended when the prompt
-     * ends at a natural token boundary (e.g. when encoding a user turn in a
-     * chat template).
-     *
-     * Falls back to `begin_stream` for prompts shorter than 2 tokens.
+     * Both APIs sample the first output from prefill logits, processing every
+     * prompt token exactly once. This does not perform partial-token healing.
      *
      * # JS example
      * ```javascript
@@ -238,6 +238,12 @@ export class FlareEngine {
      */
     count_tokens(text: string): number;
     /**
+     * Experimental text-only bounded decision. Runs exactly one CPU prefill,
+     * returns candidate logits/scores and reproduction metadata as JSON.
+     * Clears all generation state before and after, including on input errors.
+     */
+    decide(tokenizer: FlareTokenizer, request_json: string): string;
+    /**
      * Decode token IDs to text using the embedded GGUF vocabulary.
      *
      * Returns an empty string if no GGUF vocab is available.
@@ -330,6 +336,10 @@ export class FlareEngine {
      * ```
      */
     encode_text(text: string): Uint32Array;
+    /**
+     * Flush an incomplete UTF-8 suffix at the end of generation.
+     */
+    flush_decode(): string;
     /**
      * Streaming text-in / text-out generation with a per-token JS callback.
      *
@@ -550,6 +560,10 @@ export class FlareEngine {
      * `undefined` on stream end).  Identical sampling + stop-sequence +
      * EOS handling as `next_token`.  Safe to use on CPU backends too —
      * the async path falls through to the sync fast path there.
+     *
+     * Rejects on GPU execution/readback failure without sampling invalid logits.
+     * The failed stream and KV context are cleared and the backend becomes CPU;
+     * start a new generation (which prefills the prompt) before continuing.
      */
     next_token_async(): Promise<number | undefined>;
     /**
@@ -1041,6 +1055,10 @@ export class FlareTokenizer {
      */
     decode(tokens: Uint32Array): string;
     /**
+     * Raw decoded bytes for use with a streaming TextDecoder in JavaScript.
+     */
+    decode_bytes(tokens: Uint32Array): Uint8Array;
+    /**
      * Decode a single token ID to text (useful for streaming output).
      */
     decode_one(token_id: number): string;
@@ -1203,14 +1221,13 @@ export interface InitOutput {
     readonly device_info: () => [number, number];
     readonly flareengine_add_bos_token: (a: number) => number;
     readonly flareengine_add_stop_sequence: (a: number, b: number, c: number) => void;
+    readonly flareengine_apply_chat_messages: (a: number, b: number, c: number) => [number, number, number, number];
     readonly flareengine_apply_chat_template: (a: number, b: number, c: number, d: number, e: number) => [number, number];
     readonly flareengine_architecture: (a: number) => [number, number];
     readonly flareengine_backend_info: (a: number) => [number, number];
     readonly flareengine_begin_load: (a: number, b: number) => [number, number, number];
     readonly flareengine_begin_stream: (a: number, b: number, c: number, d: number) => void;
-    readonly flareengine_begin_stream_healed: (a: number, b: number, c: number, d: number) => void;
     readonly flareengine_begin_stream_healed_with_params: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => void;
-    readonly flareengine_begin_stream_with_params: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => void;
     readonly flareengine_begin_stream_with_params_async: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => any;
     readonly flareengine_bos_token_id: (a: number) => number;
     readonly flareengine_chat_template_name: (a: number) => [number, number];
@@ -1219,6 +1236,7 @@ export interface InitOutput {
     readonly flareengine_compute_perplexity: (a: number, b: number, c: number) => number;
     readonly flareengine_context_window_pct: (a: number) => number;
     readonly flareengine_count_tokens: (a: number, b: number, c: number) => number;
+    readonly flareengine_decide: (a: number, b: number, c: number, d: number) => [number, number, number, number];
     readonly flareengine_decode_ids: (a: number, b: number, c: number) => [number, number];
     readonly flareengine_decode_token: (a: number, b: number) => [number, number];
     readonly flareengine_decode_token_chunk: (a: number, b: number) => [number, number];
@@ -1227,6 +1245,7 @@ export interface InitOutput {
     readonly flareengine_enable_prefill_profiling: (a: number) => void;
     readonly flareengine_encode_text: (a: number, b: number, c: number) => [number, number];
     readonly flareengine_eos_token_id: (a: number) => number;
+    readonly flareengine_flush_decode: (a: number) => [number, number];
     readonly flareengine_generate_stream: (a: number, b: number, c: number, d: number, e: any) => number;
     readonly flareengine_generate_stream_with_params: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number, j: any) => number;
     readonly flareengine_generate_text: (a: number, b: number, c: number, d: number) => [number, number];
@@ -1283,6 +1302,7 @@ export interface InitOutput {
     readonly flareprogressiveloader_new: (a: number, b: number) => number;
     readonly flaretokenizer_bos_token_id: (a: number) => number;
     readonly flaretokenizer_decode: (a: number, b: number, c: number) => [number, number, number, number];
+    readonly flaretokenizer_decode_bytes: (a: number, b: number, c: number) => [number, number, number, number];
     readonly flaretokenizer_decode_one: (a: number, b: number) => [number, number, number, number];
     readonly flaretokenizer_encode: (a: number, b: number, c: number) => [number, number, number, number];
     readonly flaretokenizer_eos_token_id: (a: number) => number;
@@ -1299,6 +1319,8 @@ export interface InitOutput {
     readonly supports_webtransport: () => number;
     readonly webgpu_available: () => number;
     readonly start: () => void;
+    readonly flareengine_begin_stream_with_params: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => void;
+    readonly flareengine_begin_stream_healed: (a: number, b: number, c: number, d: number) => void;
     readonly wasm_bindgen__convert__closures_____invoke__hd86d3cd10d86238c: (a: number, b: number, c: any) => [number, number];
     readonly wasm_bindgen__convert__closures_____invoke__h32e9711f4622383e: (a: number, b: number, c: any, d: any) => void;
     readonly wasm_bindgen__convert__closures_____invoke__h63860f0889a1664c: (a: number, b: number, c: any) => void;

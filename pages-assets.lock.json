@@ -1,9 +1,9 @@
 {
   "version": 1,
-  "tag": "demo-v0.1.0",
-  "url": "https://github.com/benjamin-small/llm-in-browser/releases/download/demo-v0.1.0/aster-demo-v0.1.0.zip",
-  "bytes": 217569159,
-  "sha256": "45acc47da78d803788553205901d458a751894b88373b29ec726bd4272813d68",
+  "tag": "demo-v0.2.0",
+  "url": "https://github.com/benjamin-small/llm-in-browser/releases/download/demo-v0.2.0/aster-demo-v0.2.0.zip",
+  "bytes": 217671819,
+  "sha256": "23f4881e98e8c8a6a398b4704303f0f7f68cbcd95b29fcbeb2ccec57748621dd",
   "files": {
     "licenses/Flare-MIT.txt": {
       "bytes": 1069,
@@ -31,7 +31,7 @@
     },
     "models/tuned-q4/manifest.json": {
       "bytes": 10445,
-      "sha256": "4bb09c43f3e1ed3256ddf5f4a6dd5bdda6eb3def399e884d0cb118d5e138ff92"
+      "sha256": "309f9d453db502afc84a3e835b2878ddcbe5abd78cfda425f5ae591bdba24220"
     },
     "models/tuned-q4/tokenizer.json": {
       "bytes": 2104556,
@@ -42,12 +42,12 @@
       "sha256": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df"
     },
     "runtime/flare/flare_web.js": {
-      "bytes": 125369,
-      "sha256": "e242e56eb5b2a5efefe25e5c5f1afa45775a47f575435f5713f0d21083174dc8"
+      "bytes": 128853,
+      "sha256": "411d0c5048583aac358f5f203af78e32376edf3f25be53cafe2e065bc77600f1"
     },
     "runtime/flare/flare_web_bg.wasm": {
-      "bytes": 1923307,
-      "sha256": "7b4f95c89a7d25af0372d0d9cc80c61ea92c78ea7876ffeb0875adfc78275be1"
+      "bytes": 2127610,
+      "sha256": "fad4ab2ac05e04971ae7fc108e1d5fab7a782e9377cf0530fdad5317f419e988"
     },
     "runtime/station/station_core.js": {
       "bytes": 9401,
@@ -59,7 +59,11 @@
     }
   },
   "sourceHashes": {
-    "patches/flare-smollm2.patch": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+    "runtime-lock.json": "f90cf07830e70021fe9f3a2e2ea5064813e9d9b316f94c95006a7d0aafff2516",
+    "runtime-assets.lock.json": "c6457a25bba1da0a45a8959299d3bb2b162d27fa190e12426b94506fd340b65d",
+    "scripts/build_runtime.py": "171fa04069f930f33ce3580917071f13a8f03019cac2f15b10e6276a011d161b",
+    "patches/flare-smollm2.hashes.json": "f54c50b1d79bbac046a6d4cf107e81aafbae12c459eac67373beec890f2c0bcb",
+    "patches/flare-smollm2.patch": "ae76a141aa46b215ffc8ef4afceb757ee06d11af8a5fb8e30fe5e87968f6d8b5",
     "crates/station-core/src/lib.rs": "1a3c51cca840157f7e8a583b86d6edd854f0ded0e2fad9f87785070881f03eb5",
     "public/data/station.json": "e6fbf7c9e3f6a6d3b3413eb91986644c70f952384b13914c4b9d010d2a5d4d7f",
     "public/data/prompt.json": "e23aeb32816126be6cc5ee2f22c054f3572539eb066ccf36962e5f21ac6a5575"

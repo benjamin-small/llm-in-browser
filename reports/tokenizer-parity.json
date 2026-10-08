@@ -9,7 +9,7 @@
     "Flare WASM/native reference token IDs",
     "original Hugging Face tokenizer fixtures"
   ],
-  "patchSha256": "b50f6a694c85e2a74c8a4b9a7690ffa103db01d85eb8014a47e4a373f360b3e4",
+  "patchSha256": "ae76a141aa46b215ffc8ef4afceb757ee06d11af8a5fb8e30fe5e87968f6d8b5",
   "tokenizerSha256": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
   "fixtureSha256": "9b96fa686545b427cb823e2f592b18bb9f2a4e7b4e25df7fedf1167237f2b781",
   "scope": "Compiled WASM library checks in Node; GPU generation is verified separately in the actual browser."

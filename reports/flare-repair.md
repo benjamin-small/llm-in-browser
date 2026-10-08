@@ -1,3 +1,5 @@
+> Historical September repair report. For the current upstream pin and remaining Q4 workaround, see [October 8 upgrade](flare-upstream-upgrade.md).
+
 # Flare repaired: browser CPU and GPU inference pass
 
 September 8, 2026. **The runtime correctness gate now passes for the tested SmolLM2-360M-Instruct Q8_0 bundle.** This is the actual Flare Rust/WASM engine generating answers in the browser. The good answers in the earlier failing runs came from the separate local llama.cpp reference.

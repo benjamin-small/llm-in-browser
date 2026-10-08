@@ -1,0 +1,22 @@
+{
+  "flare": "b810a0362b757bf08015e194974175be4bc90ac9",
+  "date": "2026-10-08",
+  "checks": [
+    {
+      "backend": "cpu",
+      "gatePassed": true,
+      "cases": 8,
+      "exactOutputMatches": 8,
+      "tokenizerMatches": true,
+      "templateMatches": true
+    },
+    {
+      "backend": "gpu",
+      "gatePassed": true,
+      "cases": 8,
+      "exactOutputMatches": 8,
+      "tokenizerMatches": true,
+      "templateMatches": true
+    }
+  ]
+}

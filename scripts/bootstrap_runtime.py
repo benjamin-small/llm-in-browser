@@ -37,6 +37,10 @@ def source(repo, revision, name):
     archive = CACHE / "downloads" / f"{name}-{revision}.tar.gz"
     entry = fetch(f"https://codeload.github.com/{repo}/tar.gz/{revision}", archive)
     destination = CACHE / name
+    if name == "flare" and destination.exists():
+        marker = destination / ".source-revision"
+        if not marker.exists() or marker.read_text().strip() != revision:
+            raise RuntimeError("Flare cache is from a different revision. Preserve/rename .cache/flare and rerun setup:assets.")
     if not destination.exists():
         staging = CACHE / f"{name}-extract"
         staging.mkdir(exist_ok=True)
@@ -45,6 +49,7 @@ def source(repo, revision, name):
         extracted, = staging.iterdir()
         extracted.rename(destination)
         staging.rmdir()
+        (destination / ".source-revision").write_text(revision + "\n")
     return entry
 
 
