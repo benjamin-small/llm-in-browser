@@ -9,6 +9,10 @@ A tiny conversational model running locally in your browser, using **SmolLM2-360
 
 The demo also answers questions about rooms, equipment and supplies, and responds to temporary device alerts, visitors and low-stock events. Expand an answer's evidence panel to inspect the supplied facts and performance. All station information is fictional.
 
+## Runtime version
+
+Flare is pinned to upstream commit `b810a0362b757bf08015e194974175be4bc90ac9` (October 6, 2026). Upstream now provides the streaming, tokenizer, RoPE-layout and GPU-limit fixes previously maintained here. Our only remaining patch expands Q4_0 weights to Q8_0 for WASM CPU prefill; upstream issue [#529](https://github.com/sauravpanda/flarellm/issues/529) remains open. The model and training data are unchanged.
+
 ## Try it
 
 Open the demo on a desktop and select **Load model**. The model download is approximately 230 MB; loading and CPU prefill can take time. The page itself does not automatically download model weights. Desktop Chrome with WebGPU and at least 8 GB system RAM is recommended. Phones/tablets and browsers reporting 4 GB RAM or less are blocked because loading can crash a tab. Memory reporting is incomplete, so this cannot guarantee enough free memory.
@@ -35,7 +39,7 @@ Open **http://127.0.0.1:8795/llm-in-browser/**. The first build downloads the re
 
 The Pages workflow builds and deploys `dist/` on pushes to `main`. Set the repository's Pages source to **GitHub Actions**. The build verifies the release archive, every bundled file and the matching graph/runtime source hashes. Model binaries are kept in a release rather than Git; Pages serves the extracted files from the same origin as the application.
 
-To replace the model/runtime, build and validate it using the guides below, update the release version/URL in `scripts/pages_release.py`, run `npm run pages:pack`, and publish that archive before pushing the updated lockfile. Do not overwrite an existing release asset referenced by a lockfile.
+To replace the model/runtime, build and validate it using the guides below, choose a new release tag, run `npm run pages:pack -- --tag demo-v0.2.0` (increment the tag for subsequent releases), and publish that archive before pushing the updated lockfile. Do not overwrite an existing release asset referenced by a lockfile.
 
 The local runtime proof lab requires its native reference server and is not part of the hosted site. Its recorded results are included in `reports/`. To run the full local diagnostics after source setup, use `npm run dev` and open `http://127.0.0.1:8787/`. That launcher binds all IPv4 interfaces by default; `npm run dev -- --host 127.0.0.1` restricts it to this computer. For remote testing, use HTTPS or an SSH local forward to localhost, which is a browser secure context.
 
@@ -88,7 +92,7 @@ cargo clippy --manifest-path crates/station-core/Cargo.toml --offline --all-targ
 npm run build
 ```
 
-The patched runtime has 564 passing Flare core/loader tests. The original runtime gate has eight deterministic browser/reference comparisons in each CPU/GPU and regular/healed configuration. The expanded [tokenizer and retrieval parity check](reports/tokenizer-parity.json) covers 698 full prompts and 47 original-tokenizer fixtures. Run `.venv/bin/python scripts/tokenizer_fixtures.py` and `node scripts/check_wasm_parity.mjs` after producing evaluation artifacts. See [repair findings](reports/flare-repair.md), [raw repair evidence](reports/flare-repair.json), [app browser checks](reports/browser-integration.md), and the [upstream issue draft](reports/upstream-report-draft.md), with links to the published upstream issues.
+The current upstream-aligned runtime passes 601 core/loader unit, integration and documentation tests (three ignored). See the [October 8 upgrade report](reports/flare-upstream-upgrade.md). The original runtime gate has eight deterministic browser/reference comparisons in each CPU/GPU and regular/healed configuration. The expanded [tokenizer and retrieval parity check](reports/tokenizer-parity.json) covers 698 full prompts and 47 original-tokenizer fixtures. Run `.venv/bin/python scripts/tokenizer_fixtures.py` and `node scripts/check_wasm_parity.mjs` after producing evaluation artifacts. See [repair findings](reports/flare-repair.md), [raw repair evidence](reports/flare-repair.json), [app browser checks](reports/browser-integration.md), and the [upstream issue draft](reports/upstream-report-draft.md), with links to the published upstream issues.
 
 To rerun that standalone headed-Chrome gate, stop `npm run dev` first, then run `npm run proof`. It owns ports 8787/8788 temporarily and shuts them down when finished. The embedded GGUF tokenizer remains unsuitable; both the app and the passing proof use the original tokenizer JSON.
 

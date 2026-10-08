@@ -16,6 +16,10 @@ def digest(data):
 def apply(source_root=None):
     source_root = source_root or ROOT / '.cache/flare'
     hashes = json.loads((ROOT / 'patches/flare-smollm2.hashes.json').read_text())
+    revision = json.loads((ROOT / 'runtime-lock.json').read_text())['flare']
+    marker = source_root / '.source-revision'
+    if not marker.exists() or marker.read_text().strip() != revision:
+        raise RuntimeError('Flare source revision does not match runtime-lock.json')
     changed = []
     # Validate every target before changing any source file.
     for relative, versions in hashes.items():

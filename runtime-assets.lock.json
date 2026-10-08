@@ -1,9 +1,9 @@
 {
-  "https://codeload.github.com/sauravpanda/flarellm/tar.gz/a8cb07cf54fa43c4e41664316498ed195fa7b018": "7e9d88d238659c836d36ad49b2668bb25760a9723811a53dd0f9bb350f96d24d",
   "https://codeload.github.com/ggml-org/llama.cpp/tar.gz/f3f1a8f2760f28325a5ec20c05b171e5b7c83a29": "d24fce8f4658460d6dc39deb8864fb6a3a546804b04c64a64df5c8e76f18207c",
   "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct-GGUF/resolve/593b5a2e04c8f3e4ee880263f93e0bd2901ad47f/smollm2-360m-instruct-q8_0.gguf": "48ab3034d0dd401fbc721eb1df3217902fee7dab9078992d66431f09b7750201",
   "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/resolve/a10cc1512eabd3dde888204e902eca88bddb4951/tokenizer.json": "9ca9acddb6525a194ec8ac7a87f24fbba7232a9a15ffa1af0c1224fcd888e47c",
   "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/resolve/a10cc1512eabd3dde888204e902eca88bddb4951/tokenizer_config.json": "4ec77d44f62efeb38d7e044a1db318f6a939438425312dfa333b8382dbad98df",
   "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/resolve/a10cc1512eabd3dde888204e902eca88bddb4951/config.json": "224f72354f10d617a359cc82ad15a3c96e866b9b2ffadb81997eeea9e88e22ee",
-  "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/resolve/a10cc1512eabd3dde888204e902eca88bddb4951/generation_config.json": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013"
+  "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/resolve/a10cc1512eabd3dde888204e902eca88bddb4951/generation_config.json": "87b916edaaab66b3899b9d0dd0752727dff6666686da0504d89ae0a6e055a013",
+  "https://codeload.github.com/sauravpanda/flarellm/tar.gz/b810a0362b757bf08015e194974175be4bc90ac9": "592cfe1aa4b7dcf7b96ef61d355381be2c8712e1e74cbc942ea6ad0d287aeca8"
 }

@@ -15,7 +15,9 @@ def digest(path):
     with path.open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
-def pack():
+def pack(tag):
+    if not __import__("re").fullmatch(r"demo-v[0-9]+\.[0-9]+\.[0-9]+", tag):
+        raise ValueError("Expected release tag demo-vMAJOR.MINOR.PATCH")
     stage = ROOT / 'artifacts/pages-release'
     stage.mkdir(parents=True, exist_ok=True)
     files = {}
@@ -32,16 +34,16 @@ def pack():
             if path.suffix in ['.wasm', '.js']: files[f'runtime/{name}/{path.name}'] = path
     for path in (ROOT / 'licenses').iterdir():
         if path.is_file(): files['licenses/' + path.name] = path
-    archive = stage / 'aster-demo-v0.1.0.zip'
+    archive = stage / f'aster-{tag}.zip'
     entries = {}
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as out:
         for name, path in sorted(files.items()):
             out.write(path, name)
             entries[name] = {'bytes': path.stat().st_size, 'sha256': digest(path)}
-    lock = {'version': 1, 'tag': 'demo-v0.1.0',
-            'url': 'https://github.com/benjamin-small/llm-in-browser/releases/download/demo-v0.1.0/' + archive.name,
+    lock = {'version': 1, 'tag': tag,
+            'url': f'https://github.com/benjamin-small/llm-in-browser/releases/download/{tag}/' + archive.name,
             'bytes': archive.stat().st_size, 'sha256': digest(archive), 'files': entries,
-            'sourceHashes': {name: digest(ROOT/name) for name in ['patches/flare-smollm2.patch', 'crates/station-core/src/lib.rs', 'public/data/station.json', 'public/data/prompt.json']}}
+            'sourceHashes': {name: digest(ROOT/name) for name in ['runtime-lock.json', 'runtime-assets.lock.json', 'scripts/build_runtime.py', 'patches/flare-smollm2.hashes.json', 'patches/flare-smollm2.patch', 'crates/station-core/src/lib.rs', 'public/data/station.json', 'public/data/prompt.json']}}
     LOCK.write_text(json.dumps(lock, indent=2) + '\n')
     print(archive)
 
@@ -50,7 +52,7 @@ def install(archive=None):
     for name, expected in lock['sourceHashes'].items():
         if digest(ROOT/name) != expected: raise ValueError(f'Source no longer matches release: {name}')
     if archive is None:
-        archive = ROOT / '.cache/aster-demo-v0.1.0.zip'
+        archive = ROOT / '.cache' / f"aster-{lock['tag']}.zip"
         archive.parent.mkdir(parents=True, exist_ok=True)
         if not archive.exists() or digest(archive) != lock['sha256']:
             temporary = archive.with_suffix('.download')
@@ -79,6 +81,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('command', choices=['pack', 'install'])
     parser.add_argument('--archive', type=Path)
+    parser.add_argument('--tag', default='demo-v0.2.0')
     args = parser.parse_args()
-    if args.command == 'pack': pack()
+    if args.command == 'pack': pack(args.tag)
     else: install(args.archive)

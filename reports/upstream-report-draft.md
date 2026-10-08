@@ -1,3 +1,5 @@
+> October 8 update: upstream has incorporated five repairs; only Q4 compatibility remains patched locally. Historical patch variants referenced below are preserved in Git commit `0205d786667d2f7f43db35c79798ca2d27ded73b`. See [current upgrade report](flare-upstream-upgrade.md).
+
 > Publication update (September 21, 2026): this historical combined draft was split into five upstream bug reports plus a comment on existing #518. See [published report index](upstream-issues-2026-09-21/README.md). Later references below to “unposted” describe the original draft state.
 
 # Draft: SmolLM2-360M GGUF produces incorrect CPU answers and zero WebGPU logits

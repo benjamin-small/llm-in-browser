@@ -14,8 +14,8 @@
   <h1>Browser inference, under test.</h1>
   <p class="intro">Run eight short prompts through Rust/WASM and compare the answers with a local reference runtime.</p>
   <aside class="notice">
-    <strong>Browser inference is working.</strong>
-    <p>The patched Flare CPU and WebGPU paths match the local reference on eight deterministic prompts. Run the checks below. The chat interface, knowledge graph, and fine-tuning are still to come.</p>
+    <strong>Browser inference validation.</strong>
+    <p>Run the current pinned Flare build against the local reference on eight deterministic prompts. The separate chat app adds a knowledge graph and a fine-tuned model.</p>
     <a href="/reports/flare-repair.md">Read the repair findings ↗</a>
   </aside>
   <section aria-labelledby="setup-title">
@@ -42,7 +42,7 @@
     <details><summary>Raw evidence and performance</summary><pre id="output"></pre></details>
     <p id="save-status" class="hint"></p>
   </section>
-  <footer>Flare a8cb07cf · Original SmolLM2 tokenizer · Test traffic stays on this computer<br>llama.cpp is the test reference. It is not the browser inference engine.</footer>
+  <footer>Flare b810a036 · Original SmolLM2 tokenizer · Test traffic stays on this computer<br>llama.cpp is the test reference. It is not the browser inference engine.</footer>
 </main>
 </body>
 </html>
